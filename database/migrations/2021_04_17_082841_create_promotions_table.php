@@ -34,6 +34,11 @@ class CreatePromotionsTable extends Migration
                 ->on('packages')
                 ->onDelete('cascade')
                 ->onUpdate('no action');
+            $table->foreign('promotion_type_id')
+                ->references('id')
+                ->on('promotion_types')
+                ->onDelete('cascade')
+                ->onUpdate('no action');
         });
     }
 

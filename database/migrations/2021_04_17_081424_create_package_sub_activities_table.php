@@ -14,8 +14,22 @@ class CreatePackageSubActivitiesTable extends Migration
     public function up()
     {
         Schema::create('package_sub_activities', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('sub_activity_id')->unsigned();
+            $table->integer('package_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('package_id')
+                ->references('id')
+                ->on('packages')
+                ->onDelete('cascade')
+                ->onUpdate('no action');
+            $table->foreign('sub_activity_id')
+                ->references('id')
+                ->on('sub_activities')
+                ->onDelete('cascade')
+                ->onUpdate('no action');
+
         });
     }
 

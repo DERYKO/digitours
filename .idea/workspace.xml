@@ -1,7 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="" />
+    <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Digitours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Digitours.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/BlockOut.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/BlockOut.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Coupon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Coupon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Package.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageCost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageCost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageExclusive.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageExclusive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageFeedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageFeedback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageInclusive.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageInclusive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageItinerary.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageItinerary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackagePolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackagePolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageRating.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageRating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageRequirement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageRequirement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PackageSubActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PackageSubActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PaymentMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PaymentMethod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Promotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/PromotionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/PromotionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/ScheduledBooking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/ScheduledBooking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Survey.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Survey.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SurveyChoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SurveyChoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SurveyQuestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SurveyQuestion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SurveyQuestionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SurveyQuestionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SurveyResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SurveyResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestinationContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestinationContact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestinationPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestinationPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/UserAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/UserAddress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/UserBucketList.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/UserBucketList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_081424_create_package_sub_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_081424_create_package_sub_activities_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_082841_create_promotions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_082841_create_promotions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_083145_create_promotion_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_081145_create_promotion_types_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +55,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -118,9 +164,24 @@
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rGW2M6HlAGk6YPhz1yoxUH8qaT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -129,6 +190,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -149,11 +211,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618602698134</updated>
-      <workItem from="1618602700255" duration="9258000" />
+      <workItem from="1618602700255" duration="13422000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618687717844">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1618687717844" />
   </component>
 </project>
