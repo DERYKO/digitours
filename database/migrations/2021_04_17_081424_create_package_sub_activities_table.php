@@ -17,6 +17,7 @@ class CreatePackageSubActivitiesTable extends Migration
             $table->increments('id');
             $table->integer('sub_activity_id')->unsigned();
             $table->integer('package_id')->unsigned();
+            $table->integer('added_by')->unsigned();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('package_id')
@@ -27,6 +28,11 @@ class CreatePackageSubActivitiesTable extends Migration
             $table->foreign('sub_activity_id')
                 ->references('id')
                 ->on('sub_activities')
+                ->onDelete('cascade')
+                ->onUpdate('no action');
+            $table->foreign('added_by')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('no action');
 
