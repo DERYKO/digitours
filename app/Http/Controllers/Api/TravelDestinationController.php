@@ -68,7 +68,7 @@ class TravelDestinationController extends Controller
                 'travel_destination_id' => $travel_destination->id,
                 'contact_type_id' => $contact['contact_type_id'],
                 'value' => $contact['value'],
-                'added_by' => $request->User()->id
+                'added_by' => $request->user()->id
             ]);
         });
 
@@ -76,7 +76,7 @@ class TravelDestinationController extends Controller
             TravelDestinationContact::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'policy' => $policy['policy'],
-                'added_by' => $request->User()->id
+                'added_by' => $request->user()->id
             ]);
         });
 

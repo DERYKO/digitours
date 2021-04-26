@@ -56,7 +56,6 @@ class PackageController extends Controller
             'package_inclusive' => 'array',
             'package_itinerary' => 'array',
             'package_policy' => 'array',
-            'package_rating' => 'array',
             'package_requirement' => 'array',
             'package_sub_activity' => 'array',
         ]);
@@ -79,62 +78,56 @@ class PackageController extends Controller
                 'description' => $cost['description'],
                 'cost' => $cost['cost'],
                 'minimum_deposit' => $cost['minimum_deposit'],
-                'added_by' => $request->User()->id
+                'added_by' => $request->user()->id
             ]);
         });
         collect($request->package_exclusive)->each(function ($exclusive) use ($package, $request) {
             PackageExclusive::updateOrCreate([
                 'package_id' => $package->id,
                 'exclusive' => $exclusive['exclusive'],
-                'added_by' => $request->User()->id
+                'added_by' => $request->user()->id
             ]);
         });
         collect($request->package_feedback)->each(function ($feedback) use ($package, $request) {
             PackageFeedback::updateOrCreate([
                 'package_id' => $package->id,
-                'user_id' => $request->User()->id,
+                'user_id' => $request->user()->id,
                 'comment' => $feedback['comment'],
             ]);
         });
         collect($request->package_inclusive)->each(function ($inclusive) use ($package, $request) {
             PackageInclusive::updateOrCreate([
                 'package_id' => $package->id,
-                'added_by' => $request->User()->id,
+                'added_by' => $request->user()->id,
                 'inclusive' => $inclusive['inclusive'],
             ]);
         });
         collect($request->package_itinerary)->each(function ($itinerary) use ($package, $request) {
             PackageItinerary::updateOrCreate([
                 'package_id' => $package->id,
-                'added_by' => $request->User()->id,
+                'added_by' => $request->user()->id,
                 'itinerary' => $itinerary['inclusive'],
             ]);
         });
         collect($request->package_policy)->each(function ($policy) use ($package, $request) {
             PackagePolicy::updateOrCreate([
                 'package_id' => $package->id,
-                'added_by' => $request->User()->id,
+                'added_by' => $request->user()->id,
                 'policy' => $policy['policy'],
             ]);
         });
-        collect($request->package_rating)->each(function ($rating) use ($package, $request) {
-            PackageRating::updateOrCreate([
-                'package_id' => $package->id,
-                'user_id' => $request->User()->id,
-                'rating' => $rating['rating'],
-            ]);
-        });
+
         collect($request->package_requirement)->each(function ($requirement) use ($package, $request) {
             PackageRequirement::updateOrCreate([
                 'package_id' => $package->id,
-                'added_by' => $request->User()->id,
+                'added_by' => $request->user()->id,
                 'requirements' => $requirement['requirements'],
             ]);
         });
         collect($request->package_sub_activity)->each(function ($sub_activity) use ($package, $request) {
             PackageSubActivity::updateOrCreate([
                 'package_id' => $package->id,
-                'added_by' => $request->User()->id,
+                'added_by' => $request->user()->id,
                 'sub_activity_id' => $sub_activity['sub_activity_id'],
             ]);
         });
