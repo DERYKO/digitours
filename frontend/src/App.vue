@@ -7,9 +7,9 @@
 
 
 <script>
-    // import AppContent from './views/layout/content';
+    import AppContent from './views/layout/content';
     export default {
-        // components: { AppContent },
+        components: { AppContent },
         computed: {
             isLoggedIn() {
                 return this.$store.getters['profile/loggedIn'];

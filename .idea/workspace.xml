@@ -3,21 +3,82 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_081424_create_package_sub_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_081424_create_package_sub_activities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/dashlite.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/dashlite.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/quill.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/quill.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/quill.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/quill.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/summernote.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/summernote.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/summernote.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/summernote.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/tinymce.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/tinymce.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/editors/tinymce.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/editors/tinymce.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-egyptian.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-egyptian.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-red.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/skins/theme-red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nioicon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Nunito-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Light.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Medium.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/Roboto-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.eot" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/summernote.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/fonts/tinymce-mobile.woff" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/file-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/file-manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/inbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/inbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/kanban.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/kanban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/apps/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/apps/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/charts/gd-analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/charts/gd-analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/charts/gd-default.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/charts/gd-default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/editors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/editors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/example-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/example-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/example-sweetalert.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/example-sweetalert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/example-toastr.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/example-toastr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/quill.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/quill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/skins/content/default/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/skins/content/default/content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/summernote.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/summernote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/tinymce.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/editors/tinymce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/fullcalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/fullcalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/jkanban.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/jkanban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/jqvmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/jqvmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/libs/tagify.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/libs/tagify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/assets/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/About.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/dashboard/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/dashboard/dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/layout/header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/layout/header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +90,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Digitours" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,19 +232,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/views" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/views" />
       <recent name="$PROJECT_DIR$/frontend/src/data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/views" />
+      <recent name="$PROJECT_DIR$/frontend/public/assets" />
       <recent name="$PROJECT_DIR$/frontend/src/assets" />
       <recent name="$PROJECT_DIR$/frontend/public/images" />
       <recent name="$PROJECT_DIR$/frontend/src/routes" />
-      <recent name="$PROJECT_DIR$/frontend/src/data/api" />
-      <recent name="$PROJECT_DIR$/frontend/public/assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -201,7 +266,11 @@
       <updated>1618602698134</updated>
       <workItem from="1618602700255" duration="18427000" />
       <workItem from="1618738963556" duration="6898000" />
-      <workItem from="1618748547139" duration="12315000" />
+      <workItem from="1618748547139" duration="14697000" />
+      <workItem from="1618767252559" duration="2799000" />
+      <workItem from="1618810830460" duration="73000" />
+      <workItem from="1619330329786" duration="3790000" />
+      <workItem from="1619423002610" duration="599000" />
     </task>
     <servers />
   </component>
@@ -209,17 +278,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619330787846">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1619330787846" />
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618737320032">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1618737320032" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1618738963566">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1618810880978">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1618738963566" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1618759751744">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1618810880978" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1619333290447">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1618759751744" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619333290447" />
   </component>
 </project>

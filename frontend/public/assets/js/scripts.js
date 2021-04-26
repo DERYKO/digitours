@@ -11,11 +11,15 @@
       //class names
   _body_theme = 'nio-theme',
       _menu = 'nk-menu',
+      _menu_switch = 'nk-menu-switch',
+      _menu_content = 'nk-menu-content',
+      _menu_active = 'menu-active',
       _mobile_nav = 'mobile-menu',
       _header = 'nk-header',
       _header_menu = 'nk-header-menu',
       _sidebar = 'nk-sidebar',
       _sidebar_mob = 'nk-sidebar-mobile',
+      _app_sidebar = 'nk-apps-sidebar',
       //breakpoints
   _break = NioApp.Break;
 
@@ -28,6 +32,7 @@
 
 
   NioApp.ClassBody = function () {
+    NioApp.AddInBody(_app_sidebar);
     NioApp.AddInBody(_sidebar);
   }; // ClassInit @v1.0
 
@@ -116,6 +121,13 @@
         self.closest("li").addClass('active current-page').parents().closest("li").addClass("active current-page");
         self.closest("li").children('.nk-menu-sub').css('display', 'block');
         self.parents().closest("li").children('.nk-menu-sub').css('display', 'block');
+        $('.nk-menu-switch').parent().removeClass('active');
+        $('.' + _menu_content).removeClass(_menu_active);
+
+        var _closest_content = self.closest('.' + _menu_content).data('content');
+
+        self.closest('.' + _menu_content).addClass(_menu_active);
+        $('[data-target=' + _closest_content + ']').parent().addClass('active');
       } else {
         self.closest("li").removeClass('active current-page').parents().closest("li:not(.current-page)").removeClass("active");
       }
@@ -287,6 +299,23 @@
       if (NioApp.Win.width < _break.xl || NioApp.Win.width < toggleBreak) {
         NioApp.Toggle.removed($toggle.data('target'), attr);
       }
+    });
+  }; // Menu Switch
+
+
+  NioApp.menuSwitch = function () {
+    var $toggle = $('.' + _menu_switch),
+        $content = $('.' + _menu_content);
+    $toggle.on('click', function (e) {
+      var $self = $(this),
+          _target = $self.data('target'),
+          $dContent = $('[data-content=' + _target + ']');
+
+      $toggle.parent().removeClass('active');
+      $self.parent().addClass('active');
+      $content.removeClass(_menu_active);
+      $dContent.addClass(_menu_active);
+      e.preventDefault();
     });
   }; // Animate FormSearch @v1.0
 
@@ -606,8 +635,8 @@
     NioApp.PassSwitch();
     NioApp.CurrentLink();
     NioApp.LinkOff('.is-disable');
-    NioApp.ClassNavMenu(); //v1.5
-
+    NioApp.ClassNavMenu();
+    NioApp.menuSwitch();
     NioApp.SetHW('[data-height]', 'height');
     NioApp.SetHW('[data-width]', 'width');
   }; // Animate Init @v1.0

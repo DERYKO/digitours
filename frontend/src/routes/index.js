@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import auth from './auth.routes';
 import dashboard from './dashbord.routes';
+import activities from './activities.routes';
+import collections from './collections.routes';
+import destinations from './destinations.routes';
+import promotions from './promotions.routes';
+import surveys from './surveys.routes';
+import users from './users.routes';
 import authMiddleware from './middlewares/auth-middleware';
 
 Vue.use(Router);
@@ -10,6 +16,12 @@ const router = new Router({
     routes: [
         ...auth,
         ...dashboard,
+        ...activities,
+        ...collections,
+        ...destinations,
+        ...promotions,
+        ...surveys,
+        ...users,
         {
             path: '*',
             redirect: '/home',

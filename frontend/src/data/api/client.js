@@ -11,7 +11,7 @@ class Client {
         if (meta) {
             axios.defaults.headers.common['X-CSRF-TOKEN'] = meta.content;
         }
-        const token = localStorage.getItem('sat_token') || '';
+        const token = localStorage.getItem('digitours@ke') || '';
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
         this.http = axios.create({
             baseURL: 'http://127.0.0.1:8000/api/',
