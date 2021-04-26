@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Package.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +216,7 @@
       <workItem from="1618810830460" duration="73000" />
       <workItem from="1619330329786" duration="3790000" />
       <workItem from="1619423002610" duration="599000" />
-      <workItem from="1619435328122" duration="5419000" />
+      <workItem from="1619435328122" duration="8881000" />
     </task>
     <servers />
   </component>
@@ -239,10 +239,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1619330787846" />
-    <state x="455" y="194" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619440678416">
+    <state x="455" y="194" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619443958095">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="455" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1619440678416" />
+    <state x="455" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1619443958095" />
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1618737320032" />
     <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1619435430608">
       <screen x="0" y="0" width="1280" height="720" />
@@ -268,10 +268,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="458" y="275" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1619436939776" />
-    <state x="407" y="157" width="672" height="464" key="search.everywhere.popup" timestamp="1619438914892">
+    <state x="407" y="157" width="672" height="464" key="search.everywhere.popup" timestamp="1619444224523">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="407" y="157" width="672" height="464" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1619438914892" />
+    <state x="407" y="157" width="672" height="464" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1619444224523" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619333290447" />
   </component>
 </project>

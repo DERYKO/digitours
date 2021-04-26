@@ -17,4 +17,10 @@ class Package extends Model
     {
         return $this->belongsTo(TravelDestination::class);
     }
+
+    public function scopeFilterBy($query,$filters){
+        $query->when(isset($filters['search']), function ($query) use ($filters){
+            $query->where('description', 'like', '%'.$filters['search'].'%');
+        });
+    }
 }

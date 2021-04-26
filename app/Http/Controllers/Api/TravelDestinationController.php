@@ -17,7 +17,7 @@ class TravelDestinationController extends Controller
      */
     public function index(Request $request)
     {
-        $travel_destination = TravelDestination::select('name', 'logo', 'address', 'latitude', 'longitude', 'website')
+        $travel_destination = TravelDestination::select('id','name', 'logo', 'address', 'latitude', 'longitude', 'website')
             ->filterBy($request->all())
             ->get();
         return response()->json($travel_destination, 200);
@@ -45,7 +45,8 @@ class TravelDestinationController extends Controller
             'name' => 'required',
             'logo' => 'required',
             'address' => 'required',
-            'destination_contacts' => 'array'
+            'destination_contacts' => 'array',
+            'destination_policies' => 'array'
         ]);
         $path = '';
         if ($request->hasFile('logo')) {
@@ -67,6 +68,14 @@ class TravelDestinationController extends Controller
                 'travel_destination_id' => $travel_destination->id,
                 'contact_type_id' => $contact['contact_type_id'],
                 'value' => $contact['value'],
+                'added_by' => $request->User()->id
+            ]);
+        });
+
+        collect($request->destination_policies)->each(function ($policy) use ($travel_destination, $request){
+            TravelDestinationContact::updateOrCreate([
+                'travel_destination_id' => $travel_destination->id,
+                'policy' => $policy['policy'],
                 'added_by' => $request->User()->id
             ]);
         });
@@ -125,7 +134,7 @@ class TravelDestinationController extends Controller
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
         ]);
-        return ['message' => ' updated'];
+        return response()->json(['message' => ' updated'],200);
     }
 
     /**
@@ -138,6 +147,6 @@ class TravelDestinationController extends Controller
     {
         $travel_destination = TravelDestination::findOrFail($id);
         $travel_destination->delete();
-        return ['message' => ' deleted'];
+        return response()->json(['message' => 'deleted'],200);
     }
 }

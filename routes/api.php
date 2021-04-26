@@ -25,5 +25,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::get('/logout', 'AuthController@logout');
         Route::resource('/activity','ActivityController');
         Route::resource('/travel-destination','TravelDestinationController');
+        Route::resource('/package','PackageController');
+        Route::resource('/sub-activity','SubActivityController');
     });
 });

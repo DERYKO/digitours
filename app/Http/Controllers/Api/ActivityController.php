@@ -108,7 +108,7 @@ class ActivityController extends Controller
             'name' => $request->name,
             'cover_photo' => $path
         ]);
-        return ['message' => ' updated'];
+        return response()->json(['message' => 'updated'],200);
 
     }
 
@@ -122,6 +122,6 @@ class ActivityController extends Controller
     {
         $activity = Activity::findOrFail($id);
         $activity->delete();
-        return ['message' => ' deleted'];
+        return response()->json(['message' => ' deleted'],200);
     }
 }
