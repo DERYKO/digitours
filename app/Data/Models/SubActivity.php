@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubActivity extends Model
 {
+    protected $guarded = ['id'];
     protected $fillable = [
         'activity_id',
         'name',

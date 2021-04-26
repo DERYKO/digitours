@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import profile from './profile.store';
+import activities from "./activities.store";
 
 Vue.use(Vuex);
 
@@ -21,6 +22,7 @@ export default new Vuex.Store({
         },
     },
     modules: {
-        profile
+        profile,
+        activities
     }
 })
