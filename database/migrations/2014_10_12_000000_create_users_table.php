@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique()->index();
             $table->string('email')->unique()->nullable();
             $table->string('photo')->nullable();
+            $table->string('code')->nullable();
             $table->string('device_token')->nullable();
             $table->enum('preferred_notification_channel', ['sms', 'email', 'push_notification','all'])->default('all');
             $table->string('password');

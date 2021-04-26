@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Data\Models\UserBucketList;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -9,7 +10,7 @@ use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable,HasApiTokens;
+    use Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'device_token', 'preferred_notification_channel'
+        'name', 'email', 'password','photo', 'code', 'phone', 'device_token', 'preferred_notification_channel'
     ];
 
     /**
@@ -37,4 +38,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function user_bucket_list()
+    {
+        return $this->hasMany(UserBucketList::class, 'user_id', 'id');
+    }
 }
