@@ -29,9 +29,9 @@ class PackageController extends Controller
         $this->validate($request, [
             'travel_destination_id' => ['required']
         ]);
-        $packages = Package::with('travel_destination','package_cost','package_exclusive','package_inclusive','package_feedback','package_itinerary','package_policy','package_requirement','package_sub_activity')
+        $packages = Package::with('travel_destination', 'package_cost', 'package_exclusive', 'package_inclusive', 'package_feedback', 'package_itinerary', 'package_policy', 'package_requirement', 'package_sub_activity')
             ->where('travel_destination_id', $request->travel_destination_id)->get();
-        response()->json($packages, 200);
+        return response()->json($packages, 200);
     }
 
     /**
