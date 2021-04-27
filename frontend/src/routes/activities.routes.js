@@ -15,6 +15,7 @@ export default  [
         components: {
             default: () => import('../views/activities/activities-create')
         },
+        props: true,
         meta: {
             auth: true
         }

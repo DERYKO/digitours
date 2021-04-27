@@ -48,10 +48,16 @@
                     </td>
                     <td class="tb-tnx-action">
                         <div class="dropdown">
-                            <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                            <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em
+                                class="icon ni ni-more-h"></em></a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-xs">
                                 <ul class="link-list-plain">
-                                    <li><router-link :to="'/activities/create/'+activity.id">Edit</router-link></li>
+                                    <li>
+                                        <router-link
+                                            :to="{path: '/activities/create/',params: {id: activity.id,activity: activity}}">
+                                            Edit
+                                        </router-link>
+                                    </li>
                                     <li><a @click="removeActivity(activity)">Remove</a></li>
                                 </ul>
                             </div>
@@ -65,7 +71,8 @@
     </div>
 </template>
 <script>
-    import {mapActions,mapGetters} from 'vuex';
+    import {mapActions, mapGetters} from 'vuex';
+
     export default {
         created() {
             this.getActivities({});
@@ -80,7 +87,7 @@
                 getActivities: 'activities/getActivities',
                 deleteActivities: 'activities/deleteActivities'
             }),
-            removeActivity(activity){
+            removeActivity(activity) {
                 this.deleteActivities(activity);
             }
 

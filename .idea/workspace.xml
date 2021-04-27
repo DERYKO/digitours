@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Digitours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Digitours.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/activities.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/activities.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +200,9 @@
       <workItem from="1619330329786" duration="3790000" />
       <workItem from="1619423002610" duration="4742000" />
       <workItem from="1619437716204" duration="4183000" />
+      <workItem from="1619517366400" duration="519000" />
+      <workItem from="1619519536714" duration="599000" />
+      <workItem from="1619532212145" duration="322000" />
     </task>
     <servers />
   </component>
@@ -223,10 +218,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619439878800" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1619437717668">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1619532252914">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619437717668" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619532252914" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1619438922117">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
