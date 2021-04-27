@@ -16,7 +16,8 @@ class AuthController extends Controller
     public function codeValidation(Request $request)
     {
         $this->validate($request, [
-            'code' => ['required']
+            'code' => ['required'],
+            'phone' => ['required']
         ]);
         $user = User::where('phone', $request->phone)->first(['id', 'code', 'name', 'phone', 'email']);
         if ($user->code == $request->code) {
