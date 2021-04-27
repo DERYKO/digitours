@@ -18,7 +18,7 @@ class TravelDestinationController extends Controller
      */
     public function index(Request $request)
     {
-        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type,value','travel_destination_contacts.contact_type:id,name')
+        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,value','travel_destination_contacts.contact_type:id,name')
             ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website')
             ->filterBy($request->all())
             ->get();
