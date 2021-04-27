@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+    public function codeValidation(Request $request)
+    {
+        $this->validate($request, [
+            'code' => ['required']
+        ]);
+        $user = User::where('phone', $request->phone)->first(['id', 'code', 'name', 'phone', 'email']);
+        if ($user->code == $request->code) {
+            $token = $user->createToken('digitours@ke')->accessToken;
+            return response()->json(['user' => $user, 'token' => $token]);
+        } else {
+            return response()->json(['message' => 'Invalid code'])->setStatusCode(404);
+        }
+    }
+
     public function mobileLogin(Request $request)
     {
         $this->validate($request, [

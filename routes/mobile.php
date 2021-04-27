@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace' => 'Api'], function () {
     Route::post('/login', 'AuthController@mobileLogin');
+    Route::post('/code','AuthController@codeValidation');
     Route::group(['middleware' => 'auth:api'], function () {
         Route::resource('/user', 'ProfileController');
         Route::get('/logout', 'AuthController@logout');
