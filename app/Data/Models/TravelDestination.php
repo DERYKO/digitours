@@ -16,18 +16,25 @@ class TravelDestination extends Model
         'added_by'
     ];
 
-    public function package(){
-        return $this->hasMany(Package::class,'travel_destination_id','id');
+    public function travel_destination_contacts()
+    {
+        return $this->hasMany(TravelDestinationContact::class, 'travel_destination_id', 'id');
     }
 
-    public function scopeFilterBy($query,$filters){
-        $query->when(isset($filters['search']), function ($query) use ($filters){
-            $query->where('name', 'like', '%'.$filters['search'].'%');
-            $query->OrWhere('address', 'like', '%'.$filters['search'].'%');
-            $query->OrWhere('latitude', 'like', '%'.$filters['search'].'%');
-            $query->OrWhere('longitude', 'like', '%'.$filters['search'].'%');
-            $query->OrWhereHas('package', function ($q) use ($filters){
-                $q->where('description', 'like','%'.$filters['search'].'%');
+    public function package()
+    {
+        return $this->hasMany(Package::class, 'travel_destination_id', 'id');
+    }
+
+    public function scopeFilterBy($query, $filters)
+    {
+        $query->when(isset($filters['search']), function ($query) use ($filters) {
+            $query->where('name', 'like', '%' . $filters['search'] . '%');
+            $query->OrWhere('address', 'like', '%' . $filters['search'] . '%');
+            $query->OrWhere('latitude', 'like', '%' . $filters['search'] . '%');
+            $query->OrWhere('longitude', 'like', '%' . $filters['search'] . '%');
+            $query->OrWhereHas('package', function ($q) use ($filters) {
+                $q->where('description', 'like', '%' . $filters['search'] . '%');
             });
         });
     }

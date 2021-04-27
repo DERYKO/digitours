@@ -6,6 +6,7 @@ use App\Data\Models\TravelDestination;
 use App\Data\Models\TravelDestinationContact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 class TravelDestinationController extends Controller
@@ -13,11 +14,12 @@ class TravelDestinationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index(Request $request)
     {
-        $travel_destination = TravelDestination::select('id','name', 'logo', 'address', 'latitude', 'longitude', 'website')
+        $travel_destination = TravelDestination::with('travel_destination_contacts')
+            ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website')
             ->filterBy($request->all())
             ->get();
         return response()->json($travel_destination, 200);
@@ -26,7 +28,7 @@ class TravelDestinationController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -36,8 +38,8 @@ class TravelDestinationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -63,7 +65,7 @@ class TravelDestinationController extends Controller
             'longitude' => $request->longitude,
             'added_by' => Auth::id()
         ]);
-        collect($request->destination_contacts)->each(function ($contact) use ($travel_destination, $request){
+        collect($request->destination_contacts)->each(function ($contact) use ($travel_destination, $request) {
             TravelDestinationContact::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'contact_type_id' => $contact['contact_type_id'],
@@ -72,7 +74,7 @@ class TravelDestinationController extends Controller
             ]);
         });
 
-        collect($request->destination_policies)->each(function ($policy) use ($travel_destination, $request){
+        collect($request->destination_policies)->each(function ($policy) use ($travel_destination, $request) {
             TravelDestinationContact::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'policy' => $policy['policy'],
@@ -87,7 +89,7 @@ class TravelDestinationController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -98,7 +100,7 @@ class TravelDestinationController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -108,9 +110,9 @@ class TravelDestinationController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -134,19 +136,19 @@ class TravelDestinationController extends Controller
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
         ]);
-        return response()->json(['message' => ' updated'],200);
+        return response()->json(['message' => ' updated'], 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
         $travel_destination = TravelDestination::findOrFail($id);
         $travel_destination->delete();
-        return response()->json(['message' => 'deleted'],200);
+        return response()->json(['message' => 'deleted'], 200);
     }
 }
