@@ -18,5 +18,9 @@ Route::group(['namespace' => 'Api'], function () {
     Route::group(['middleware' => 'auth:api'], function () {
         Route::resource('/user', 'ProfileController');
         Route::get('/logout', 'AuthController@logout');
+        Route::resource('/activity','ActivityController');
+        Route::resource('/sub-activity','SubActivityController');
+        Route::resource('/travel-destination','TravelDestinationController');
+        Route::resource('/package','PackageController');
     });
 });

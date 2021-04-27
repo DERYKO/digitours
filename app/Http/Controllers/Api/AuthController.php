@@ -27,14 +27,15 @@ class AuthController extends Controller
             ]);
             dispatch(new SendSmsMessage($request->phone, "Your code is $code kindly use it to login"));
             return response()->json(['user' => User::where('phone', $request->phone)
-                ->first(['id', 'name', 'code','phone', 'email']), 'status' => 'existing']);
+                ->first(['id', 'name', 'code', 'phone', 'email']), 'status' => 'existing']);
         } else {
             $new = User::create([
                 'phone' => $request->phone,
                 'code' => $code,
                 'password' => Hash::make($request->phone)
             ]);
-            return response()->json(['user' => User::where('id', $new->id)->first(['id', 'name', 'code','phone', 'email']), 'status' => 'new']);
+            dispatch(new SendSmsMessage($request->phone, "Your code is $code kindly use it to login"));
+            return response()->json(['user' => User::where('id', $new->id)->first(['id', 'name', 'code', 'phone', 'email']), 'status' => 'new']);
         }
     }
 
