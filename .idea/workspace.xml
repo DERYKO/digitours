@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SubActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SubActivityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_075418_create_travel_destination_galleries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_075418_create_travel_destination_galleries_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/activities.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/activities.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/activities.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/activities.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities-create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/components/general/loader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/components/general/loader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,6 +204,7 @@
       <workItem from="1620052480370" duration="1825000" />
       <workItem from="1620110588251" duration="25000" />
       <workItem from="1620128140996" duration="311000" />
+      <workItem from="1620129163143" duration="47000" />
     </task>
     <servers />
   </component>
