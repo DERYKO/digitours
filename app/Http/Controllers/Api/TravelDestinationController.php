@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Data\Models\TravelDestination;
 use App\Data\Models\TravelDestinationContact;
+use App\Data\Models\TravelDestinationPolicy;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -18,8 +19,8 @@ class TravelDestinationController extends Controller
      */
     public function index(Request $request)
     {
-        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value','travel_destination_contacts.contact_type:id,name')
-            ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website')
+        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value', 'travel_destination_contacts.contact_type:id,name')
+            ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website', 'created_at')
             ->filterBy($request->all())
             ->get();
         return response()->json($travel_destination, 200);
@@ -46,9 +47,7 @@ class TravelDestinationController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'logo' => 'required',
-            'address' => 'required',
-            'destination_contacts' => 'array',
-            'destination_policies' => 'array'
+            'destination_policy' => 'array'
         ]);
         $path = '';
         if ($request->hasFile('logo')) {
@@ -65,22 +64,11 @@ class TravelDestinationController extends Controller
             'longitude' => $request->longitude,
             'added_by' => Auth::id()
         ]);
-        collect($request->destination_contacts)->each(function ($contact) use ($travel_destination, $request) {
-            TravelDestinationContact::updateOrCreate([
-                'travel_destination_id' => $travel_destination->id,
-                'contact_type_id' => $contact['contact_type_id'],
-                'value' => $contact['value'],
-                'added_by' => $request->user()->id
-            ]);
-        });
-
-        collect($request->destination_policies)->each(function ($policy) use ($travel_destination, $request) {
-            TravelDestinationContact::updateOrCreate([
-                'travel_destination_id' => $travel_destination->id,
-                'policy' => $policy['policy'],
-                'added_by' => $request->user()->id
-            ]);
-        });
+        TravelDestinationPolicy::updateOrCreate([
+            'travel_destination_id' => $travel_destination->id,
+            'policy' => $request->policy,
+            'added_by' => $request->user()->id
+        ]);
 
         return response()->json($travel_destination, 200);
     }
@@ -93,7 +81,8 @@ class TravelDestinationController extends Controller
      */
     public function show($id)
     {
-        //
+        $travel_destination = TravelDestination::with('policy','gallery')->findOrFail($id);
+        return \response()->json($travel_destination);
     }
 
     /**
@@ -119,22 +108,20 @@ class TravelDestinationController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'logo' => 'required',
-            'address' => 'required'
+            'policy' => 'required'
         ]);
-        $path = '';
-        if ($request->hasFile('logo')) {
-            $path = $request->file('logo')->store('images/logos', [
-                'disk' => 'public'
-            ]);
-        }
         $travel_destination = TravelDestination::findOrFail($id);
         $travel_destination->update([
             'name' => $request->name,
-            'logo' => $path,
             'address' => $request->address,
             'website' => $request->website,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
+        ]);
+        TravelDestinationPolicy::updateOrCreate([
+            'travel_destination_id' => $travel_destination->id,
+        ],[
+            'policy' => $request->policy,
         ]);
         return response()->json(['message' => ' updated'], 200);
     }

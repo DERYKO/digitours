@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/profile', function (Request $request) {
 Route::group(['namespace' => 'Api'], function () {
     Route::post('/login', 'AuthController@login');
     Route::post('/reset', 'AuthController@forgot');
+    Route::resource('/destination-gallery','TravelDestinationGalleryController');
     Route::group(['middleware' => 'auth:api'], function () {
         Route::resource('/user', 'UserController');
         Route::get('/logout', 'AuthController@logout');

@@ -16,7 +16,7 @@ class CreateTravelDestinationGalleriesTable extends Migration
         Schema::create('travel_destination_galleries', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('travel_destination_id')->unsigned();
-            $table->enum('file_type',['video','image']);
+            $table->string('file_type');
             $table->string('file_path');
             $table->integer('added_by')->unsigned();
             $table->timestamps();

@@ -38,5 +38,15 @@ export default [
         meta: {
             auth: true,
         },
+    },
+    {
+        path: '/destination-packages/:id',
+        name: 'destination-packages',
+        components: {
+            default: () => import(/* webpackChunkName: "auth" */ '../views/packages/packages'),
+        },
+        meta: {
+            auth: true,
+        },
     }
 ];

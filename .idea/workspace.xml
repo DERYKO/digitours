@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PackageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/SubActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestinationGallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/SubActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SubActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_17_075418_create_travel_destination_galleries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_17_075418_create_travel_destination_galleries_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/activities.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/activities.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/activities.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/activities.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/components/general/loader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/components/general/loader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,15 +174,15 @@
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -163,11 +190,11 @@
       <recent name="$PROJECT_DIR$/frontend/src/data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/frontend/src/assets" />
       <recent name="$PROJECT_DIR$/frontend/src/views" />
       <recent name="$PROJECT_DIR$/frontend/public/assets" />
-      <recent name="$PROJECT_DIR$/frontend/src/assets" />
       <recent name="$PROJECT_DIR$/frontend/public/images" />
-      <recent name="$PROJECT_DIR$/frontend/src/routes" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,6 +224,15 @@
       <workItem from="1619517366400" duration="519000" />
       <workItem from="1619519536714" duration="599000" />
       <workItem from="1619532212145" duration="322000" />
+      <workItem from="1619540113783" duration="79000" />
+      <workItem from="1619540495503" duration="64000" />
+      <workItem from="1619593428438" duration="11000" />
+      <workItem from="1619593461301" duration="71000" />
+      <workItem from="1619852340508" duration="13816000" />
+      <workItem from="1619973187437" duration="14466000" />
+      <workItem from="1620052480370" duration="1825000" />
+      <workItem from="1620110588251" duration="25000" />
+      <workItem from="1620128140996" duration="311000" />
     </task>
     <servers />
   </component>
@@ -208,21 +244,21 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1619330787846" />
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619439878800">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619987009806">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619439878800" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1619532252914">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619987009806" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1620129162933">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1619532252914" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620129162933" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1619438922117">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619438922117" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1619537178126">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1620128247327">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619537178126" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1620128247327" />
   </component>
 </project>

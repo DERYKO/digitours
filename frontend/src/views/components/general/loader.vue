@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="col-sm-12 d-flex justify-content-center" v-if="loading" :class="loaderClasses">
-            <img style="width: 90px;" class="u-block opacity-50 u-mr-small" src="assets/img/1495.gif">
+            <img style="width: 250px; height: 250px" class="u-block opacity-50 u-mr-small" src="../../../assets/loading.gif">
         </div>
         <slot v-if="!loading"/>
     </div>

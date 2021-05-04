@@ -2,7 +2,9 @@
 
 namespace App\Data\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 
 class TravelDestination extends Model
 {
@@ -16,6 +18,20 @@ class TravelDestination extends Model
         'added_by'
     ];
 
+    public function getLogoAttribute($value)
+    {
+        if ($value && !str_contains($value, 'http')) {
+            return URL::to('storage/' . $value);
+        } else {
+            return $value;
+        }
+    }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return Carbon::parse($value)->toDayDateTimeString();
+    }
+
     public function travel_destination_contacts()
     {
         return $this->hasMany(TravelDestinationContact::class, 'travel_destination_id', 'id');
@@ -24,6 +40,16 @@ class TravelDestination extends Model
     public function package()
     {
         return $this->hasMany(Package::class, 'travel_destination_id', 'id');
+    }
+
+    public function policy()
+    {
+        return $this->hasOne(TravelDestinationPolicy::class, 'travel_destination_id', 'id');
+    }
+
+    public function gallery()
+    {
+        return $this->hasMany(TravelDestinationGallery::class, 'travel_destination_id', 'id');
     }
 
     public function scopeFilterBy($query, $filters)

@@ -20,6 +20,7 @@
             </div><!-- .toggle-wrap -->
         </div>
         <br/>
+        <loader first-time-only listen="activities/list">
         <div class="card card-bordered card-preview">
             <table class="table table-tranx">
                 <thead>
@@ -54,7 +55,7 @@
                                 <ul class="link-list-plain">
                                     <li>
                                         <router-link
-                                            :to="{path: '/activities/create/',params: {id: activity.id,activity: activity}}">
+                                            :to="{path: '/activities/create/'+activity.id}">
                                             Edit
                                         </router-link>
                                     </li>
@@ -66,8 +67,8 @@
                 </tr>
                 </tbody>
             </table>
-
         </div>
+        </loader>
     </div>
 </template>
 <script>

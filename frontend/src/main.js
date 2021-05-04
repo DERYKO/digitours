@@ -21,7 +21,9 @@ import {
     Image,
     Icon,
     Carousel,
-    CarouselItem
+    CarouselItem,
+    Steps,
+    Step,
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -37,6 +39,8 @@ Vue.component(Image.name,Image);
 Vue.component(Icon.name,Icon);
 Vue.component(Carousel.name,Carousel);
 Vue.component(CarouselItem.name,CarouselItem);
+Vue.component(Steps.name,Steps);
+Vue.component(Step.name,Step);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
@@ -44,8 +48,16 @@ Vue.prototype.$ELEMENT = {size: 'medium', zIndex: 3000};
 
 Vue.prototype.$confirm = MessageBox.confirm;
 
+import 'element-ui/lib/theme-chalk/index.css';
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
+import {VueMasonryPlugin} from 'vue-masonry';
+
+// or using CJS
+// const VueMasonryPlugin = require('vue-masonry').VueMasonryPlugin
+
+Vue.use(VueMasonryPlugin);
+
 locale.use(lang);
 
 new Vue({
