@@ -70,6 +70,17 @@
                         </td>
                     </tr>
                     </tbody>
+                    <tfoot>
+                    <tr>
+                        <td
+                            v-if="sub_activities.length === 0"
+                            class="text-center"
+                            colspan="6"
+                        >
+                            No records
+                        </td>
+                    </tr>
+                    </tfoot>
                 </table>
             </div>
         </loader>

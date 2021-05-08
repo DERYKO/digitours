@@ -81,7 +81,7 @@ class TravelDestinationController extends Controller
      */
     public function show($id)
     {
-        $travel_destination = TravelDestination::with('policy','gallery')->findOrFail($id);
+        $travel_destination = TravelDestination::with('policy','gallery','contacts.contact_type:id,name')->findOrFail($id);
         return \response()->json($travel_destination);
     }
 

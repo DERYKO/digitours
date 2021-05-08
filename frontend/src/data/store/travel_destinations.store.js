@@ -77,6 +77,25 @@ export default {
             } catch (e) {
                 this._vm.$message.error('Error uploading travel_destination! gallery');
             }
+        },
+        async createTravelDestinationContact({dispatch},contact){
+            try {
+                await api.createTravelDestinationContact(contact);
+                this._vm.$message.success('Created succesfully!');
+                dispatch('getTravelDestination',contact.travel_destination_id);
+            } catch (e) {
+                console.log(e);
+                this._vm.$message.error('Error creating travel destination contact');
+            }
+        },
+        async updateTravelDestinationContact({dispatch},contact){
+            try {
+                await api.updateTravelDestinationContact(contact);
+                this._vm.$message.success('Updated succesfully!');
+                dispatch('getTravelDestination',contact.travel_destination_id);
+            } catch (e) {
+                this._vm.$message.error('Error updating travel destination contact');
+            }
         }
     }
 }

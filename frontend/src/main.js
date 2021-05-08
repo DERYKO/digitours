@@ -24,6 +24,7 @@ import {
     CarouselItem,
     Steps,
     Step,
+    Dialog
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -41,6 +42,7 @@ Vue.component(Carousel.name,Carousel);
 Vue.component(CarouselItem.name,CarouselItem);
 Vue.component(Steps.name,Steps);
 Vue.component(Step.name,Step);
+Vue.component(Dialog.name,Dialog);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;

@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-      <div class="row">
+        <loader first-time-only listen="travel_destinations/edit">
+
+        <div class="row">
           <div class="col-sm-12">
               <span style="font-size: 18px;font-weight: bold"><img :src="travel_destination.logo" style="height: 30px;width: 30px"/>  {{travel_destination.name}}</span>
               <vue-dropzone class="card" @vdropzone-success="onFileUploadSuccess" ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"></vue-dropzone>
@@ -23,6 +25,7 @@
               </div>
           </div>
       </div>
+        </loader>
     </div>
 </template>
 <script>

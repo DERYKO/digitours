@@ -3,13 +3,18 @@ import Vuex from 'vuex'
 import profile from './profile.store';
 import activities from "./activities.store";
 import travel_destinations from "./travel_destinations.store";
+import contact_types from "./contact_types.store";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
         autoSave: true,
-        loading: {}
+        loading: {},
+        dialogVisible: false
+    },
+    getters: {
+        dialogVisible: state => state.dialogVisible
     },
     mutations: {
         activateLoading(state, key) {
@@ -21,10 +26,14 @@ export default new Vuex.Store({
         setAutoSave(state, autoSave) {
             state.autoSave = autoSave;
         },
+        openModal(state,status){
+            state.dialogVisible = status;
+        }
     },
     modules: {
         profile,
         activities,
-        travel_destinations
+        travel_destinations,
+        contact_types
     }
 })

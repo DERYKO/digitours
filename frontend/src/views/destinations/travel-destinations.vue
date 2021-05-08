@@ -88,6 +88,17 @@
                         </td>
                     </tr>
                     </tbody>
+                    <tfoot>
+                    <tr>
+                        <td
+                            v-if="travel_destinations.length === 0"
+                            class="text-center"
+                            colspan="9"
+                        >
+                            No records
+                        </td>
+                    </tr>
+                    </tfoot>
                 </table>
             </div>
         </loader>

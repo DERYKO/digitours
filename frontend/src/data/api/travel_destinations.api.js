@@ -20,5 +20,11 @@ export default {
     },
     async deleteTravelDestinationGallery(image) {
         return client.parseResponse(await client.delete('/destination-gallery/' + image.id));
+    },
+    async createTravelDestinationContact(contact) {
+        return client.parseResponse(await client.post('/travel-destination-contact', contact));
+    },
+    async updateTravelDestinationContact(contact) {
+        return client.parseResponse(await client.put('/travel-destination-contact/' + contact.id, contact));
     }
 }
