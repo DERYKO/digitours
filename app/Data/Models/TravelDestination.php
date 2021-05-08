@@ -37,6 +37,16 @@ class TravelDestination extends Model
         return $this->hasMany(TravelDestinationContact::class, 'travel_destination_id', 'id');
     }
 
+    public function sub_activities()
+    {
+        return $this->hasMany(TravelDestinationSubActivity::class, 'travel_destination_id', 'id');
+    }
+
+    public function tags()
+    {
+        return $this->hasMany(TravelDestinationTag::class, 'travel_destination_id', 'id');
+    }
+
     public function contacts()
     {
         return $this->hasMany(TravelDestinationContact::class, 'travel_destination_id', 'id');

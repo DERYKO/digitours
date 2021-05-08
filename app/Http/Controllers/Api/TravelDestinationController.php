@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Data\Models\TravelDestination;
 use App\Data\Models\TravelDestinationContact;
 use App\Data\Models\TravelDestinationPolicy;
+use App\Data\Models\TravelDestinationSubActivity;
+use App\Data\Models\TravelDestinationTag;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -69,6 +71,19 @@ class TravelDestinationController extends Controller
             'policy' => $request->policy,
             'added_by' => $request->user()->id
         ]);
+        collect($request->sub_activities)->each(function ($item) use ($travel_destination) {
+            TravelDestinationSubActivity::updateOrCreate([
+                'travel_destination_id' => $travel_destination->id,
+                'sub_activity_id' => $item,
+                'added_by' => Auth::id()
+            ]);
+        });
+        collect($request->tags)->each(function ($item) use ($travel_destination) {
+            TravelDestinationTag::updateOrCreate([
+                'travel_destination_id' => $travel_destination->id,
+                'activity_id' => $item
+            ]);
+        });
 
         return response()->json($travel_destination, 200);
     }
@@ -81,7 +96,7 @@ class TravelDestinationController extends Controller
      */
     public function show($id)
     {
-        $travel_destination = TravelDestination::with('policy','gallery','contacts.contact_type:id,name')->findOrFail($id);
+        $travel_destination = TravelDestination::with('policy', 'gallery', 'contacts.contact_type:id,name', 'tags','sub_activities')->findOrFail($id);
         return \response()->json($travel_destination);
     }
 
@@ -120,9 +135,25 @@ class TravelDestinationController extends Controller
         ]);
         TravelDestinationPolicy::updateOrCreate([
             'travel_destination_id' => $travel_destination->id,
-        ],[
+        ], [
             'policy' => $request->policy,
         ]);
+        TravelDestinationTag::where('travel_destination_id', $id)->delete();
+        collect($request->tags)->each(function ($item) use ($id) {
+            TravelDestinationTag::updateOrCreate([
+                'travel_destination_id' => $id,
+                'activity_id' => $item,
+                'added_by' => Auth::id()
+            ]);
+        });
+        TravelDestinationSubActivity::where('travel_destination_id', $id)->delete();
+        collect($request->sub_activities)->each(function ($item) use ($id) {
+            TravelDestinationSubActivity::updateOrCreate([
+                'travel_destination_id' => $id,
+                'sub_activity_id' => $item,
+                'added_by' => Auth::id()
+            ]);
+        });
         return response()->json(['message' => ' updated'], 200);
     }
 

@@ -1,8 +1,22 @@
 <template>
     <div>
         <form action="#" class="gy-3">
+            <div class="row g-3">
+                <div class="col-lg-7">
+                    <div class="form-group mt-2">
+                        <el-button style="margin-top: 12px;" type="success" v-show="step!==0" @click="previous"><i
+                            class="el-icon-arrow-left"/> Previous
+                        </el-button>
+                        <el-button style="margin-top: 12px;" type="primary" @click="next">
+                            {{step === 2 ? "Submit" : "Next Step"}} <i class="el-icon-arrow-right"/>
+                        </el-button>
+                    </div>
+                </div>
+            </div>
             <el-steps :active="step">
                 <el-step title="Set up" icon="el-icon-edit">
+                </el-step>
+                <el-step title="Activities" icon="el-icon-dish">
                 </el-step>
                 <el-step title="Policy" icon="el-icon-notebook-2"></el-step>
             </el-steps>
@@ -53,8 +67,59 @@
                         </div>
                     </div>
                 </div>
+                <div class="row g-3 align-center">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label">Tags</label>
+                            <span class="form-note">E.g. Nature,Water,Mall.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <div class="form-control-wrap">
+                                <el-select
+                                    v-model="form.tags"
+                                    multiple
+                                    collapse-tags
+                                    style="width: 100%"
+                                    placeholder="Select">
+                                    <el-option
+                                        v-for="activity in activities"
+                                        :key="activity.id"
+                                        :label="activity.name"
+                                        :value="activity.id">
+                                    </el-option>
+                                </el-select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div v-show="step === 1">
+                <div class="row">
+                    <div v-masonry transition-duration="0.3s" item-selector=".item" :origin-top="true"
+                         :horizontal-order="false">
+                        <div class="row">
+                                <div v-masonry-tile class="col-sm-4" :key="sub_activity.id"
+                                     v-for="sub_activity in sub_activities">
+                                    <div class="card m-4" style="width: 350px;">
+                                        <el-image
+                                            fit="fit"
+                                            style="width: 350px; height: 300px"
+                                            :src="sub_activity.cover_photo"
+                                            :preview-src-list="[sub_activity.cover_photo]">
+                                        </el-image>
+                                        <div class="card-body">
+                                            <label :for="''+sub_activity.id">     {{sub_activity.name}}</label>
+                                            <input class="form-control align-start" type="checkbox" :id="''+sub_activity.id" :value="sub_activity.id" v-model="form.sub_activities">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-show="step === 2">
                 <div class="row g-3 align-start">
                     <div class="col-lg-3">
                         <div class="form-group">
@@ -72,19 +137,10 @@
                 </div>
             </div>
         </form>
-        <div class="row g-3">
-            <div class="col-lg-7">
-                <div class="form-group mt-2">
-                    <el-button style="margin-top: 12px;" type="success" v-show="step!==0" @click="previous">Previous
-                    </el-button>
-                    <el-button style="margin-top: 12px;" type="primary" @click="next">{{step === 1 ? 'Submit' : 'Next Step'}}</el-button>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 <script>
-    import {mapActions,mapGetters} from 'vuex';
+    import {mapActions, mapGetters} from 'vuex';
     import CKEditor from 'ckeditor4-vue';
     import vue2Dropzone from 'vue2-dropzone'
     import 'vue2-dropzone/dist/vue2Dropzone.min.css'
@@ -95,11 +151,15 @@
             ckeditor: CKEditor.component
         },
         created() {
+            this.getSubActivities({});
+            this.getActivities({});
             if (this.$route.params.id) {
                 this.getTravelDestination(this.$route.params.id).then(() => {
                     this.form = this.travel_destination;
-                    this.form.policy = this.travel_destination.policy ?  this.travel_destination.policy.policy : '';
-                    let file = {size: 123, name: "Icon", type: "image/jpeg"};
+                    this.form.sub_activities = this.travel_destination.sub_activities.map(i => i.sub_activity_id);
+                    this.form.tags = this.travel_destination.tags.map(i => i.activity_id);
+                    this.form.policy = this.travel_destination.policy ? this.travel_destination.policy.policy : '';
+                    let file = {size: 123, name: "Icon", type: "sub_activity/jpeg"};
                     let url = this.form.logo;
                     this.$refs.myVueDropzone.manuallyAddFile(file, url);
                 });
@@ -111,30 +171,36 @@
                 dropzoneOptions: {
                     maxFilesize: 5,
                     maxFiles: 1,
-                    url: 'api/sample-image-upload',
+                    url: 'api/sample-sub_activity-upload',
                     autoProcessQueue: false,
                     thumbnailWidth: 150,
-                    headers: {"My-Awesome-Header": "Click to upload an image"},
+                    headers: {"My-Awesome-Header": "Click to upload an sub_activity"},
                     addRemoveLinks: true
                 },
-                form: {}
+                form: {
+                    sub_activities: []
+                }
             }
         },
         computed: {
-          ...mapGetters({
-              travel_destination: 'travel_destinations/travel_destination'
-          })
+            ...mapGetters({
+                sub_activities: 'activities/sub_activities',
+                activities: 'activities/activities',
+                travel_destination: 'travel_destinations/travel_destination'
+            })
         },
         methods: {
             ...mapActions({
+                getSubActivities: 'activities/getSubActivities',
+                getActivities: 'activities/getActivities',
                 updateTravelDestination: 'travel_destinations/updateTravelDestination',
                 createTravelDestination: 'travel_destinations/createTravelDestination',
                 getTravelDestination: 'travel_destinations/getTravelDestination',
             }),
             next() {
-                if (this.step!==1){
+                if (this.step !== 2) {
                     this.step++
-                }else{
+                } else {
                     if (this.form.id) {
                         this.updateTravelDestination(this.form);
                     } else {

@@ -24,7 +24,9 @@ import {
     CarouselItem,
     Steps,
     Step,
-    Dialog
+    Dialog,
+    CheckboxGroup,
+    Checkbox
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -43,6 +45,8 @@ Vue.component(CarouselItem.name,CarouselItem);
 Vue.component(Steps.name,Steps);
 Vue.component(Step.name,Step);
 Vue.component(Dialog.name,Dialog);
+Vue.component(CheckboxGroup.name,CheckboxGroup);
+Vue.component(Checkbox.name,Checkbox);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
