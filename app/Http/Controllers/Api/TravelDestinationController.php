@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class TravelDestinationController extends Controller
 {
@@ -71,17 +72,20 @@ class TravelDestinationController extends Controller
             'policy' => $request->policy,
             'added_by' => $request->user()->id
         ]);
-        collect($request->sub_activities)->each(function ($item) use ($travel_destination) {
+        collect(explode(',',$request->sub_activities))->each(function ($item) use ($travel_destination) {
             TravelDestinationSubActivity::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'sub_activity_id' => $item,
+            ],[
                 'added_by' => Auth::id()
             ]);
         });
-        collect($request->tags)->each(function ($item) use ($travel_destination) {
+        collect(explode(',',$request->tags))->each(function ($item) use ($travel_destination) {
             TravelDestinationTag::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
-                'activity_id' => $item
+                'activity_id' => $item,
+            ],[
+                'added_by' => Auth::id()
             ]);
         });
 

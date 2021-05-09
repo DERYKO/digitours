@@ -4,7 +4,7 @@ import profile from './profile.store';
 import activities from "./activities.store";
 import travel_destinations from "./travel_destinations.store";
 import contact_types from "./contact_types.store";
-
+import packages from "./packages.store";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -34,6 +34,7 @@ export default new Vuex.Store({
         profile,
         activities,
         travel_destinations,
-        contact_types
+        contact_types,
+        packages
     }
 })

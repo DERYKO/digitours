@@ -19,7 +19,7 @@ class Client {
 
         this.http.interceptors.response.use(response => response, async (error) => {
             if (error.response && error.response.status === 401) {
-                localStorage.removeItem('sat_token');
+                localStorage.removeItem('digitours@ke');
                 window.location.href = '/home';
             }
             return Promise.reject(error);

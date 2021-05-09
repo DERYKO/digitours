@@ -1,10 +1,10 @@
 <template>
     <div>
-        <app-sidebar/>
-        <div class="nk-main ">
+        <div class="nk-main">
+            <app-sidebar/>
             <div class="nk-wrap ">
                 <app-header/>
-                <div class="nk-content ">
+                <div class="nk-content">
                     <div class="container-fluid">
                         <div class="nk-content-inner">
                             <router-view/>

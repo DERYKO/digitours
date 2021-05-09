@@ -16,7 +16,7 @@ class CreateTravelDestinationSubActivitiesTable extends Migration
         Schema::create('travel_destination_sub_activities', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('travel_destination_id')->unsigned();
-            $table->integer('sub_activity_id')->unsigned()->unique();
+            $table->integer('sub_activity_id')->unsigned();
             $table->integer('added_by')->unsigned();
             $table->double('cost')->nullable();
             $table->timestamps();

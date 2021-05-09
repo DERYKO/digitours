@@ -57,13 +57,12 @@ class PackageController extends Controller
             'description' => 'required',
             'cover_photo' => 'required',
             'package_cost' => 'array',
-            'package_exclusive' => 'array',
-            'package_feedback' => 'array',
-            'package_inclusive' => 'array',
-            'package_itinerary' => 'array',
-            'package_policy' => 'array',
-            'package_requirement' => 'array',
-            'package_sub_activity' => 'array',
+            'exclusive' => 'required',
+            'inclusive' => 'required',
+            'itinerary' => 'required',
+            'policy' => 'required',
+            'requirements' => 'required',
+            'sub_activities' => ['required'],
         ]);
         $path = '';
         if ($request->hasFile('cover_photo')) {
@@ -84,57 +83,46 @@ class PackageController extends Controller
                 'description' => $cost['description'],
                 'cost' => $cost['cost'],
                 'minimum_deposit' => $cost['minimum_deposit'],
+            ],[
                 'added_by' => $request->user()->id
             ]);
         });
-        collect($request->package_exclusive)->each(function ($exclusive) use ($package, $request) {
-            PackageExclusive::updateOrCreate([
-                'package_id' => $package->id,
-                'exclusive' => $exclusive['exclusive'],
-                'added_by' => $request->user()->id
-            ]);
-        });
-        collect($request->package_feedback)->each(function ($feedback) use ($package, $request) {
-            PackageFeedback::updateOrCreate([
-                'package_id' => $package->id,
-                'user_id' => $request->user()->id,
-                'comment' => $feedback['comment'],
-            ]);
-        });
-        collect($request->package_inclusive)->each(function ($inclusive) use ($package, $request) {
-            PackageInclusive::updateOrCreate([
-                'package_id' => $package->id,
-                'added_by' => $request->user()->id,
-                'inclusive' => $inclusive['inclusive'],
-            ]);
-        });
-        collect($request->package_itinerary)->each(function ($itinerary) use ($package, $request) {
-            PackageItinerary::updateOrCreate([
-                'package_id' => $package->id,
-                'added_by' => $request->user()->id,
-                'itinerary' => $itinerary['inclusive'],
-            ]);
-        });
-        collect($request->package_policy)->each(function ($policy) use ($package, $request) {
-            PackagePolicy::updateOrCreate([
-                'package_id' => $package->id,
-                'added_by' => $request->user()->id,
-                'policy' => $policy['policy'],
-            ]);
-        });
-
-        collect($request->package_requirement)->each(function ($requirement) use ($package, $request) {
-            PackageRequirement::updateOrCreate([
-                'package_id' => $package->id,
-                'added_by' => $request->user()->id,
-                'requirements' => $requirement['requirements'],
-            ]);
-        });
-        collect($request->package_sub_activity)->each(function ($sub_activity) use ($package, $request) {
+        PackageExclusive::updateOrCreate([
+            'package_id' => $package->id,
+            'exclusive' => $request['exclusive'],
+        ],[
+            'added_by' => $request->user()->id
+        ]);
+        PackageInclusive::updateOrCreate([
+            'package_id' => $package->id,
+            'inclusive' => $request['inclusive'],
+        ],[
+            'added_by' => $request->user()->id,
+        ]);
+        PackageItinerary::updateOrCreate([
+            'package_id' => $package->id,
+            'itinerary' => $request['itinerary'],
+        ],[
+            'added_by' => $request->user()->id,
+        ]);
+        PackagePolicy::updateOrCreate([
+            'package_id' => $package->id,
+            'policy' => $request['policy'],
+        ],[
+            'added_by' => $request->user()->id,
+        ]);
+        PackageRequirement::updateOrCreate([
+            'package_id' => $package->id,
+            'requirements' => $request['requirements'],
+        ],[
+            'added_by' => $request->user()->id,
+        ]);
+        collect(explode(',',$request->sub_activities))->each(function ($sub_activity) use ($package, $request) {
             PackageSubActivity::updateOrCreate([
                 'package_id' => $package->id,
+                'sub_activity_id' => $sub_activity,
+            ],[
                 'added_by' => $request->user()->id,
-                'sub_activity_id' => $sub_activity['sub_activity_id'],
             ]);
         });
         return response()->json($package, 200);
@@ -148,7 +136,8 @@ class PackageController extends Controller
      */
     public function show($id)
     {
-        //
+        $package = Package::with('travel_destination', 'package_cost', 'package_exclusive', 'package_inclusive', 'package_feedback', 'package_itinerary', 'package_policy', 'package_requirement', 'package_sub_activity')->findOrFail($id);
+        return \response()->json($package);
     }
 
     /**
@@ -175,20 +164,74 @@ class PackageController extends Controller
             'travel_destination_id' => 'required',
             'description' => 'required',
             'cover_photo' => 'required',
-
+            'exclusive' => 'required',
+            'inclusive' => 'required',
+            'itinerary' => 'required',
+            'policy' => 'required',
+            'requirements' => 'required',
+            'sub_activities' => ['required'],
         ]);
-        $path = '';
-        if ($request->hasFile('cover_photo')) {
-            $path = $request->file('cover_photo')->store('images/packages', [
-                'disk' => 'public'
-            ]);
-        }
+//        $path = '';
+//        if ($request->hasFile('cover_photo')) {
+//            $path = $request->file('cover_photo')->store('images/packages', [
+//                'disk' => 'public'
+//            ]);
+//        }
         $package = Package::findOrFail($id);
         $package->update([
             'travel_destination_id' => $request->travel_destination_id,
             'description' => $request->description,
-            'cover_photo' => $path,
         ]);
+        PackageCost::where('package_id',$package->id)->delete();
+        collect($request->costs)->each(function ($cost) use ($package, $request) {
+            PackageCost::updateOrCreate([
+                'package_id' => $package->id,
+                'description' => $cost['description'],
+                'cost' => $cost['cost'],
+                'minimum_deposit' => $cost['minimum_deposit'],
+            ],[
+                'added_by' => $request->user()->id
+            ]);
+        });
+        PackageExclusive::updateOrCreate([
+            'package_id' => $package->id,
+        ],[
+            'exclusive' => $request['exclusive'],
+            'added_by' => $request->user()->id
+        ]);
+        PackageInclusive::updateOrCreate([
+            'package_id' => $package->id,
+        ],[
+            'inclusive' => $request['inclusive'],
+            'added_by' => $request->user()->id,
+        ]);
+        PackageItinerary::updateOrCreate([
+            'package_id' => $package->id,
+        ],[
+            'itinerary' => $request['itinerary'],
+            'added_by' => $request->user()->id,
+        ]);
+        PackagePolicy::updateOrCreate([
+            'package_id' => $package->id,
+        ],[
+            'policy' => $request['policy'],
+            'added_by' => $request->user()->id,
+        ]);
+        PackageRequirement::updateOrCreate([
+            'package_id' => $package->id,
+        ],[
+            'requirements' => $request['requirements'],
+            'added_by' => $request->user()->id,
+        ]);
+        PackageSubActivity::where('package_id',$package->id)->delete();
+        collect($request->sub_activities)->each(function ($sub_activity) use ($package, $request) {
+            PackageSubActivity::updateOrCreate([
+                'package_id' => $package->id,
+                'sub_activity_id' => $sub_activity,
+            ],[
+                'added_by' => $request->user()->id,
+            ]);
+        });
         return response()->json(['message' => 'updated'], 200);
     }
 

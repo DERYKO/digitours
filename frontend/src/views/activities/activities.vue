@@ -22,7 +22,7 @@
         <br/>
         <loader first-time-only listen="activities/list">
         <div class="card card-bordered card-preview">
-            <table class="table table-tranx">
+            <table class="table table-tranx table-responsive-sm">
                 <thead>
                 <tr class="tb-tnx-head">
                     <th>#ID</th>

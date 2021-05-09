@@ -48,5 +48,15 @@ export default [
         meta: {
             auth: true,
         },
+    },
+    {
+        path: '/packages/:travel_destination_id/create/:id?',
+        name: 'destination-packages-create',
+        components: {
+            default: () => import(/* webpackChunkName: "auth" */ '../views/packages/packages-create'),
+        },
+        meta: {
+            auth: true,
+        },
     }
 ];

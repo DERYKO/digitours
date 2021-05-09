@@ -3,10 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/Package.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PackageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_08_114044_create_travel_destination_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_08_114044_create_travel_destination_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_08_114106_create_travel_destination_sub_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_08_114106_create_travel_destination_sub_activities_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/activities/sub-activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/layout/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/layout/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/packages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/packages.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +225,7 @@
       <workItem from="1620128140996" duration="311000" />
       <workItem from="1620129163143" duration="47000" />
       <workItem from="1620196110788" duration="50000" />
-      <workItem from="1620451730902" duration="17353000" />
+      <workItem from="1620451730902" duration="38593000" />
     </task>
     <servers />
   </component>
@@ -224,10 +237,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1619330787846" />
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620461043724">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620546710524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620461043724" />
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620546710524" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1620196113005">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -236,9 +249,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619438922117" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1620470703906">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1620546703957">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1620470703906" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1620546703957" />
   </component>
 </project>

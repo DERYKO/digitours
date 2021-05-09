@@ -103,12 +103,9 @@
                                 <div v-masonry-tile class="col-sm-4" :key="sub_activity.id"
                                      v-for="sub_activity in sub_activities">
                                     <div class="card m-4" style="width: 350px;">
-                                        <el-image
-                                            fit="fit"
-                                            style="width: 350px; height: 300px"
-                                            :src="sub_activity.cover_photo"
-                                            :preview-src-list="[sub_activity.cover_photo]">
-                                        </el-image>
+                                        <img class="card-img-top" :src="sub_activity.cover_photo" :srcset="sub_activity.cover_photo"
+                                             style="width: 350px; height: 300px"
+                                             alt="logo">
                                         <div class="card-body">
                                             <label :for="''+sub_activity.id">     {{sub_activity.name}}</label>
                                             <input class="form-control align-start" type="checkbox" :id="''+sub_activity.id" :value="sub_activity.id" v-model="form.sub_activities">

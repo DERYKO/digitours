@@ -16,7 +16,7 @@ class CreateTravelDestinationTagsTable extends Migration
         Schema::create('travel_destination_tags', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('travel_destination_id')->unsigned();
-            $table->integer('activity_id')->unsigned()->unique();
+            $table->integer('activity_id')->unsigned();
             $table->integer('added_by')->unsigned();
             $table->timestamps();
             $table->softDeletes();
