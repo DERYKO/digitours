@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-lg btn-primary">Save Contact</button>
+                                <button type="submit" class="btn btn-lg btn-primary">Save Cost</button>
                             </div>
                         </form>
                     </el-dialog>

@@ -8,18 +8,18 @@ module.exports = {
             verbose: true,
             disableDotRule: true,
         },
-        proxy: {
-            '/api': {
-                target: process.env.APP_URL,
-                ws: true,
-                changeOrigin: true,
-            },
-            '/logout': {
-                target: process.env.APP_URL,
-                ws: true,
-                changeOrigin: true,
-            },
-        },
+        // proxy: {
+        //     '/api': {
+        //         target: process.env.APP_URL,
+        //         ws: true,
+        //         changeOrigin: true,
+        //     },
+        //     '/logout': {
+        //         target: process.env.APP_URL,
+        //         ws: true,
+        //         changeOrigin: true,
+        //     },
+        // },
     },
     assetsDir: 'assets',
     publicPath: '/spa/',
