@@ -190,10 +190,10 @@
                             <h6 class="overline-title text-primary-alt">Settings</h6>
                         </li><!-- .nk-menu-heading -->
                         <li class="nk-menu-item">
-                            <a href="html/index-sales.html" class="nk-menu-link">
+                            <router-link to="/users" class="nk-menu-link">
                                 <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
                                 <span class="nk-menu-text">Users</span>
-                            </a>
+                            </router-link>
                         </li><!-- .nk-menu-item -->
                     </ul>
                 </div>

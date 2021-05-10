@@ -6,7 +6,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/promotions/promotion-types'),
         },
         meta: {
-            auth: true,
+            auth: true,admin: true,
         },
     },
     {
@@ -16,7 +16,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/promotions/promotion-types-create'),
         },
         meta: {
-            auth: true,
+            auth: true,admin: true,
         },
     },
     {
@@ -26,7 +26,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/promotions/promotions'),
         },
         meta: {
-            auth: true,
+            auth: true,admin: true,
         },
     },
     {
@@ -36,7 +36,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/promotions/promotions-create'),
         },
         meta: {
-            auth: true,
+            auth: true,admin: true,
         },
     },
 ];

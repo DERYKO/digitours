@@ -6,7 +6,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/users/users'),
         },
         meta: {
-            auth: true,
+             auth: true,admin: true,
         },
     },
     {
@@ -16,7 +16,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/users/users-create'),
         },
         meta: {
-            auth: true,
+             auth: true,admin: true,
         },
     }
 ];

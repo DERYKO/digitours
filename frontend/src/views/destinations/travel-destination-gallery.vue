@@ -13,7 +13,6 @@
                       <div class="card m-4" style="width: 350px;">
                           <el-image
                               fit="fill"
-                              style="width: 350px; height: 300px"
                               :src="image.file_path"
                               :preview-src-list="[image.file_path]">
                           </el-image>

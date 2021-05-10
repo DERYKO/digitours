@@ -1,4 +1,5 @@
 import api from '../api';
+
 export default {
     namespaced: true,
     state: {
@@ -28,7 +29,7 @@ export default {
                 commit('setUser', response.user);
                 window.location.href = '/dashboard'
             } catch (e) {
-                alert(e.response.data.message)
+                this._vm.$message.error(e.response.data.message);
             }
         },
         async getProfile({commit}, filters = {}) {
@@ -36,7 +37,7 @@ export default {
                 const response = await api.getProfile(filters);
                 commit('setUser', response);
             } catch (e) {
-                alert(e);
+                this._vm.$message.error('Error fetching profile');
             }
         },
         async logout(context, filters = {}) {
@@ -53,10 +54,13 @@ export default {
         },
         async getUsers({commit}, filters) {
             try {
+                commit('activateLoading', 'users/list', {root: true});
                 const response = await api.getUsers(filters);
                 commit('setUsers', response);
+                commit('deactivateLoading', 'users/list', {root: true});
             } catch (e) {
-                alert(e);
+                this._vm.$message.error('Error fetching users');
+                commit('deactivateLoading', 'users/list', {root: true});
             }
         }
     }

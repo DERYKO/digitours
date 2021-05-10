@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/packages-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/packages-create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/profile.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/profile.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/activities.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/activities.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/collections.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/collections.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/dashbord.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/dashbord.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/destinations.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/promotions.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/promotions.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/users.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/users.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/layout/sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/users/users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/users/users.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +220,10 @@
       <workItem from="1620128140996" duration="311000" />
       <workItem from="1620129163143" duration="47000" />
       <workItem from="1620196110788" duration="50000" />
-      <workItem from="1620451730902" duration="40478000" />
+      <workItem from="1620451730902" duration="42507000" />
+      <workItem from="1620627281228" duration="21000" />
+      <workItem from="1620651060664" duration="2154000" />
+      <workItem from="1620675273618" duration="1479000" />
     </task>
     <servers />
   </component>
@@ -224,21 +235,21 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="357" width="664" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1619330787846" />
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620546710524">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620675643582">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620546710524" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1620196113005">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620675643582" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1620675321014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620196113005" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1620675321014" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1619438922117">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1619438922117" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1620555698896">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1620675909396">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1620555698896" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1620675909396" />
   </component>
 </project>

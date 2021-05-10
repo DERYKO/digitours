@@ -6,7 +6,7 @@ export default  [
             default: () => import(/* webpackChunkName: "auth" */ '../views/activities/activities'),
         },
         meta: {
-            auth: true,
+             auth: true,admin: true,
         },
     },
     {
@@ -17,7 +17,7 @@ export default  [
         },
         props: true,
         meta: {
-            auth: true
+             auth: true,admin: true,
         }
     },
     {
@@ -27,7 +27,7 @@ export default  [
             default: () => import(/* webpackChunkName: "auth" */ '../views/activities/sub-activities'),
         },
         meta: {
-            auth: true,
+             auth: true,admin: true,
         },
     },
     {
@@ -37,7 +37,7 @@ export default  [
             default: () => import('../views/activities/sub-activities-create')
         },
         meta: {
-            auth: true
+             auth: true,admin: true,
         }
     }
 ];

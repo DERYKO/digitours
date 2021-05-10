@@ -6,7 +6,7 @@ export default  [
             default: () => import(/* webpackChunkName: "auth" */ '../views/dashboard/dashboard'),
         },
         meta: {
-            auth: true,
+             auth: true,admin: true,
         },
     },
     {
