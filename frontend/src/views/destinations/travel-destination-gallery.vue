@@ -46,7 +46,7 @@
                 response: "",
                 dropzoneOptions: {
                     maxFilesize: 10,
-                    url: '/api/destination-gallery?travel_destination_id=' + this.$route.params.id,
+                    url: 'http://127.0.0.1:8000/api/destination-gallery?travel_destination_id=' + this.$route.params.id,
                     // autoProcessQueue: false,
                     thumbnailWidth: 150,
                     headers: {"My-Awesome-Header": "header value"},

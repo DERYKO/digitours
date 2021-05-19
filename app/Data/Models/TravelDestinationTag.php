@@ -11,4 +11,9 @@ class TravelDestinationTag extends Model
         'activity_id',
         'added_by'
     ];
+
+    public function activity()
+    {
+        return $this->belongsTo(Activity::class);
+    }
 }

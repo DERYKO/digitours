@@ -8,7 +8,7 @@
                             class="el-icon-arrow-left"/> Previous
                         </el-button>
                         <el-button style="margin-top: 12px;" type="primary" @click="next">
-                            {{step === 2 ? "Submit" : "Next Step"}} <i class="el-icon-arrow-right"/>
+                            {{ step === 2 ? "Submit" : "Next Step" }} <i class="el-icon-arrow-right"/>
                         </el-button>
                     </div>
                 </div>
@@ -94,24 +94,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="row g-3 align-center">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label">Location</label>
+                            <span class="form-note">Map Address</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <vue-google-autocomplete
+                            id="map"
+                            classname="form-control"
+                            placeholder="Start typing"
+                            v-on:placechanged="getAddressData"
+                            country="ke"
+                        >
+                        </vue-google-autocomplete>
+                    </div>
+                </div>
             </div>
             <div v-show="step === 1">
                 <div class="row">
                     <div v-masonry transition-duration="0.3s" item-selector=".item" :origin-top="true"
                          :horizontal-order="false">
                         <div class="row">
-                                <div v-masonry-tile class="col-sm-4" :key="sub_activity.id"
-                                     v-for="sub_activity in sub_activities">
-                                    <div class="card m-4" style="width: 350px;">
-                                        <img class="card-img-top" :src="sub_activity.cover_photo" :srcset="sub_activity.cover_photo"
-                                             style="width: 350px; height: 300px"
-                                             alt="logo">
-                                        <div class="card-body">
-                                            <label :for="''+sub_activity.id">     {{sub_activity.name}}</label>
-                                            <input class="form-control align-start" type="checkbox" :id="''+sub_activity.id" :value="sub_activity.id" v-model="form.sub_activities">
-                                        </div>
+                            <div v-masonry-tile class="col-sm-4" :key="sub_activity.id"
+                                 v-for="sub_activity in sub_activities">
+                                <div class="card m-4" style="width: 350px;">
+                                    <img class="card-img-top" :src="sub_activity.cover_photo"
+                                         :srcset="sub_activity.cover_photo"
+                                         style="width: 350px; height: 300px"
+                                         alt="logo">
+                                    <div class="card-body">
+                                        <label :for="''+sub_activity.id"> {{ sub_activity.name }}</label>
+                                        <input class="form-control align-start" type="checkbox" :id="''+sub_activity.id"
+                                               :value="sub_activity.id" v-model="form.sub_activities">
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,80 +157,92 @@
     </div>
 </template>
 <script>
-    import {mapActions, mapGetters} from 'vuex';
-    import CKEditor from 'ckeditor4-vue';
-    import vue2Dropzone from 'vue2-dropzone'
-    import 'vue2-dropzone/dist/vue2Dropzone.min.css'
+import {mapActions, mapGetters} from 'vuex';
+import CKEditor from 'ckeditor4-vue';
+import vue2Dropzone from 'vue2-dropzone'
+import 'vue2-dropzone/dist/vue2Dropzone.min.css'
+import VueGoogleAutocomplete from 'vue-google-autocomplete'
 
-    export default {
-        components: {
-            vueDropzone: vue2Dropzone,
-            ckeditor: CKEditor.component
-        },
-        created() {
-            this.getSubActivities({});
-            this.getActivities({});
-            if (this.$route.params.id) {
-                this.getTravelDestination(this.$route.params.id).then(() => {
-                    this.form = this.travel_destination;
-                    this.form.sub_activities = this.travel_destination.sub_activities.map(i => i.sub_activity_id);
-                    this.form.tags = this.travel_destination.tags.map(i => i.activity_id);
-                    this.form.policy = this.travel_destination.policy ? this.travel_destination.policy.policy : '';
-                    let file = {size: 123, name: "Icon", type: "sub_activity/jpeg"};
-                    let url = this.form.logo;
-                    this.$refs.myVueDropzone.manuallyAddFile(file, url);
-                });
+export default {
+    components: {
+        vueDropzone: vue2Dropzone,
+        ckeditor: CKEditor.component,
+        VueGoogleAutocomplete: VueGoogleAutocomplete
+    },
+    created() {
+        this.getSubActivities({});
+        this.getActivities({});
+        if (this.$route.params.id) {
+            this.getTravelDestination(this.$route.params.id).then(() => {
+                this.form = this.travel_destination;
+                this.form.sub_activities = this.travel_destination.sub_activities.map(i => i.sub_activity_id);
+                this.form.tags = this.travel_destination.tags.map(i => i.activity_id);
+                this.form.policy = this.travel_destination.policy ? this.travel_destination.policy.policy : '';
+                let file = {size: 123, name: "Icon", type: "sub_activity/jpeg"};
+                let url = this.form.logo;
+                this.$refs.myVueDropzone.manuallyAddFile(file, url);
+            });
+        }
+    },
+    data() {
+        return {
+            step: 0,
+            dropzoneOptions: {
+                maxFilesize: 5,
+                maxFiles: 1,
+                url: 'api/sample-sub_activity-upload',
+                autoProcessQueue: false,
+                thumbnailWidth: 150,
+                headers: {"My-Awesome-Header": "Click to upload an sub_activity"},
+                addRemoveLinks: true
+            },
+            form: {
+                sub_activities: []
             }
-        },
-        data() {
-            return {
-                step: 0,
-                dropzoneOptions: {
-                    maxFilesize: 5,
-                    maxFiles: 1,
-                    url: 'api/sample-sub_activity-upload',
-                    autoProcessQueue: false,
-                    thumbnailWidth: 150,
-                    headers: {"My-Awesome-Header": "Click to upload an sub_activity"},
-                    addRemoveLinks: true
-                },
-                form: {
-                    sub_activities: []
-                }
-            }
-        },
-        computed: {
-            ...mapGetters({
-                sub_activities: 'activities/sub_activities',
-                activities: 'activities/activities',
-                travel_destination: 'travel_destinations/travel_destination'
-            })
-        },
-        methods: {
-            ...mapActions({
-                getSubActivities: 'activities/getSubActivities',
-                getActivities: 'activities/getActivities',
-                updateTravelDestination: 'travel_destinations/updateTravelDestination',
-                createTravelDestination: 'travel_destinations/createTravelDestination',
-                getTravelDestination: 'travel_destinations/getTravelDestination',
-            }),
-            next() {
-                if (this.step !== 2) {
-                    this.step++
+        }
+    },
+    computed: {
+        ...mapGetters({
+            sub_activities: 'activities/sub_activities',
+            activities: 'activities/activities',
+            travel_destination: 'travel_destinations/travel_destination'
+        })
+    },
+    methods: {
+        ...mapActions({
+            getSubActivities: 'activities/getSubActivities',
+            getActivities: 'activities/getActivities',
+            updateTravelDestination: 'travel_destinations/updateTravelDestination',
+            createTravelDestination: 'travel_destinations/createTravelDestination',
+            getTravelDestination: 'travel_destinations/getTravelDestination',
+        }),
+        next() {
+            if (this.step !== 2) {
+                this.step++
+            } else {
+                if (this.form.id) {
+                    this.updateTravelDestination(this.form);
                 } else {
-                    if (this.form.id) {
-                        this.updateTravelDestination(this.form);
-                    } else {
-                        this.createTravelDestination(this.form);
-                    }
+                    this.createTravelDestination(this.form);
                 }
-            },
-            previous() {
-                this.step--
-            },
-            sendingFile(file) {
-                this.form.logo = file;
-            },
+            }
+        },
+        previous() {
+            this.step--
+        },
+        sendingFile(file) {
+            this.form.logo = file;
+        },
+        getAddressData(addressData, placeResultData, id) {
+            this.form.address = placeResultData.formatted_address;
+            this.form.latitude = addressData.latitude;
+            this.form.longitude = addressData.latitude;
+            this.form.map_label = id;
+            this.form.country = addressData.country;
+            this.form.region = addressData.administrative_area_level_1
+            this.form.locality = addressData.locality
+            this.form.route = addressData.route
         }
     }
+}
 </script>

@@ -13,7 +13,7 @@ export default  [
         path: '/home',
         name: 'home',
         components: {
-            default: () => import(/* webpackChunkName: "auth" */ '../views/dashboard/dashboard'),
+            default: () => import(/* webpackChunkName: "auth" */ '../views/dashboard/home'),
         },
         meta: {
             guest: true,

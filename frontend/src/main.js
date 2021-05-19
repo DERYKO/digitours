@@ -26,7 +26,8 @@ import {
     Step,
     Dialog,
     CheckboxGroup,
-    Checkbox
+    Checkbox,
+    Tag
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -47,6 +48,7 @@ Vue.component(Step.name,Step);
 Vue.component(Dialog.name,Dialog);
 Vue.component(CheckboxGroup.name,CheckboxGroup);
 Vue.component(Checkbox.name,Checkbox);
+Vue.component(Tag.name,Tag);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;

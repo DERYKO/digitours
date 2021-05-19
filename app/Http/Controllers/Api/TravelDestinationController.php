@@ -2,9 +2,17 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\Country;
+use App\Data\Models\Locality;
+use App\Data\Models\Region;
+use App\Data\Models\Route;
 use App\Data\Models\TravelDestination;
 use App\Data\Models\TravelDestinationContact;
+use App\Data\Models\TravelDestinationCountry;
+use App\Data\Models\TravelDestinationLocality;
 use App\Data\Models\TravelDestinationPolicy;
+use App\Data\Models\TravelDestinationRegion;
+use App\Data\Models\TravelDestinationRoute;
 use App\Data\Models\TravelDestinationSubActivity;
 use App\Data\Models\TravelDestinationTag;
 use App\Http\Controllers\Controller;
@@ -22,7 +30,7 @@ class TravelDestinationController extends Controller
      */
     public function index(Request $request)
     {
-        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value', 'travel_destination_contacts.contact_type:id,name')
+        $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value', 'gallery', 'travel_destination_contacts.contact_type:id,name', 'tags.activity')
             ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website', 'created_at')
             ->filterBy($request->all())
             ->get();
@@ -67,24 +75,25 @@ class TravelDestinationController extends Controller
             'longitude' => $request->longitude,
             'added_by' => Auth::id()
         ]);
+        $this->saveMapping($request, $travel_destination->id);
         TravelDestinationPolicy::updateOrCreate([
             'travel_destination_id' => $travel_destination->id,
             'policy' => $request->policy,
             'added_by' => $request->user()->id
         ]);
-        collect(explode(',',$request->sub_activities))->each(function ($item) use ($travel_destination) {
+        collect(explode(',', $request->sub_activities))->each(function ($item) use ($travel_destination) {
             TravelDestinationSubActivity::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'sub_activity_id' => $item,
-            ],[
+            ], [
                 'added_by' => Auth::id()
             ]);
         });
-        collect(explode(',',$request->tags))->each(function ($item) use ($travel_destination) {
+        collect(explode(',', $request->tags))->each(function ($item) use ($travel_destination) {
             TravelDestinationTag::updateOrCreate([
                 'travel_destination_id' => $travel_destination->id,
                 'activity_id' => $item,
-            ],[
+            ], [
                 'added_by' => Auth::id()
             ]);
         });
@@ -100,7 +109,7 @@ class TravelDestinationController extends Controller
      */
     public function show($id)
     {
-        $travel_destination = TravelDestination::with('policy', 'gallery', 'contacts.contact_type:id,name', 'tags','sub_activities')->findOrFail($id);
+        $travel_destination = TravelDestination::with('policy', 'gallery', 'contacts.contact_type:id,name', 'tags', 'sub_activities')->findOrFail($id);
         return \response()->json($travel_destination);
     }
 
@@ -142,6 +151,7 @@ class TravelDestinationController extends Controller
         ], [
             'policy' => $request->policy,
         ]);
+        $this->saveMapping($request, $id);
         TravelDestinationTag::where('travel_destination_id', $id)->delete();
         collect($request->tags)->each(function ($item) use ($id) {
             TravelDestinationTag::updateOrCreate([
@@ -172,5 +182,57 @@ class TravelDestinationController extends Controller
         $travel_destination = TravelDestination::findOrFail($id);
         $travel_destination->delete();
         return response()->json(['message' => 'deleted'], 200);
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function saveMapping(Request $request, $travel_destination_id)
+    {
+        if ($request->country) {
+            $country = Country::updateOrCreate([
+                'name' => $request->country
+            ], [
+                'code' => $request->code
+            ]);
+            TravelDestinationCountry::updateOrCreate([
+                'travel_destination_id' => $travel_destination_id
+            ], [
+                'country_id' => $country->id
+            ]);
+            if ($request->region) {
+                $region = Region::updateOrCreate([
+                    'country_id' => $country->id,
+                    'name' => $request->region
+                ]);
+                TravelDestinationRegion::updateOrCreate([
+                    'travel_destination_id' => $travel_destination_id
+                ], [
+                    'region_id' => $region->id
+                ]);
+                if ($request->locality) {
+                    $locality = Locality::updateOrCreate([
+                        'region_id' => $region->id,
+                        'name' => $request->locality
+                    ]);
+                    TravelDestinationLocality::updateOrCreate([
+                        'travel_destination_id' => $travel_destination_id
+                    ], [
+                        'locality_id' => $locality->id
+                    ]);
+                    if ($request->route) {
+                        $route = Route::updateOrCreate([
+                            'locality_id' => $locality->id,
+                            'name' => $request->route
+                        ]);
+                        TravelDestinationRoute::updateOrCreate([
+                            'travel_destination_id' => $travel_destination_id
+                        ], [
+                            'route_id' => $route->id
+                        ]);
+                    }
+                }
+            }
+        }
     }
 }

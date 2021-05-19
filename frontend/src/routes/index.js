@@ -9,6 +9,7 @@ import promotions from './promotions.routes';
 import surveys from './surveys.routes';
 import users from './users.routes';
 import authMiddleware from './middlewares/auth-middleware';
+import adminMiddleware from './middlewares/admin-middleware';
 
 Vue.use(Router);
 const router = new Router({
@@ -31,7 +32,10 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
     let result = next();
-    if (to.meta.auth === true) {
+    if (to.meta.admin) {
+        result = adminMiddleware(to, next);
+    }
+    if (to.meta.auth) {
         result = authMiddleware(to, next);
     }
     return result;

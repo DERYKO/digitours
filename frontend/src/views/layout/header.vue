@@ -1,5 +1,5 @@
 <template>
-    <div  class="nk-header nk-header-fixed nk-header-fluid is-light">
+    <div class="nk-header nk-header-fixed nk-header-fluid is-light">
         <div class="container-fluid">
             <div class="nk-header-wrap">
                 <div class="nk-menu-trigger d-xl-none ml-n1">
@@ -8,9 +8,11 @@
                 </div>
                 <div class="nk-header-brand d-xl-none">
                     <router-link to="/dashboard" class="logo-link">
-                        <img class="logo-light logo-img" src="../../assets/favicon.png" srcset="../../assets/favicon.png 2x"
+                        <img class="logo-light logo-img" src="../../assets/favicon.png"
+                             srcset="../../assets/favicon.png 2x"
                              alt="logo">
-                        <img class="logo-dark logo-img" src="../../assets/favicon.png" srcset="../../assets/favicon.png 2x" alt="logo-dark">
+                        <img class="logo-dark logo-img" src="../../assets/favicon.png"
+                             srcset="../../assets/favicon.png 2x" alt="logo-dark">
                     </router-link>
                 </div><!-- .nk-header-brand -->
                 <div class="nk-header-search ml-3 ml-xl-0">
@@ -63,8 +65,8 @@
                                             <span>DC</span>
                                         </div>
                                         <div class="user-info">
-                                            <span class="lead-text">{{profile.name}}</span>
-                                            <span class="sub-text">{{profile.email}}</span>
+                                            <span class="lead-text">{{ profile.name }}</span>
+                                            <span class="sub-text">{{ profile.email }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -96,28 +98,28 @@
     </div>
 </template>
 <script>
-    import {mapActions, mapGetters} from 'vuex';
+import {mapActions, mapGetters} from 'vuex';
 
-    export default {
-        data() {
-            return {
-                search: ''
-            };
-        },
-        watch: {
-            search(val) {
-                this.$emit('onSearch', val);
-            }
-        },
-        methods: {
-            ...mapActions({
-                logout: 'profile/logout',
-            }),
-        },
-        computed: {
-            ...mapGetters({
-                profile: 'profile/user',
-            }),
-        },
-    };
+export default {
+    data() {
+        return {
+            search: ''
+        };
+    },
+    watch: {
+        search(val) {
+            this.$emit('onSearch', val);
+        }
+    },
+    methods: {
+        ...mapActions({
+            logout: 'profile/logout',
+        }),
+    },
+    computed: {
+        ...mapGetters({
+            profile: 'profile/user',
+        }),
+    },
+};
 </script>
