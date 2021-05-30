@@ -31,7 +31,7 @@ class TravelDestinationController extends Controller
     public function index(Request $request)
     {
         $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value', 'gallery', 'travel_destination_contacts.contact_type:id,name', 'tags.activity','packages',
-            'packages.package_cost', 'packages.package_exclusive', 'packages.package_inclusive',  'packages.package_itinerary', 'packages.package_policy', 'packages.package_requirement', 'packages.package_sub_activity')
+            'packages.package_cost', 'packages.package_exclusive', 'packages.package_inclusive',  'packages.package_itinerary', 'packages.package_policy', 'packages.package_requirement', 'packages.package_sub_activity.sub_activity:id,name')
             ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website', 'created_at')
             ->filterBy($request->all())
             ->get();
