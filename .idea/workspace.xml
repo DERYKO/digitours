@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +235,7 @@
       <workItem from="1620970423023" duration="12026000" />
       <workItem from="1621246397996" duration="231000" />
       <workItem from="1621441796174" duration="3477000" />
+      <workItem from="1621967423002" duration="1876000" />
     </task>
     <servers />
   </component>

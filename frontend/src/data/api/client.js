@@ -14,7 +14,7 @@ class Client {
         const token = localStorage.getItem('digitours@ke') || '';
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
         this.http = axios.create({
-            baseURL: 'https://backend.digitours.co.ke/api/',
+            baseURL: 'http://159.89.88.97/api/',
         });
 
         this.http.interceptors.response.use(response => response, async (error) => {

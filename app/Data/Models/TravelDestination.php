@@ -52,7 +52,7 @@ class TravelDestination extends Model
         return $this->hasMany(TravelDestinationContact::class, 'travel_destination_id', 'id');
     }
 
-    public function package()
+    public function packages()
     {
         return $this->hasMany(Package::class, 'travel_destination_id', 'id');
     }
