@@ -20,15 +20,16 @@ Route::middleware('auth:api')->get('/profile', function (Request $request) {
 Route::group(['namespace' => 'Api'], function () {
     Route::post('/login', 'AuthController@login');
     Route::post('/reset', 'AuthController@forgot');
-    Route::resource('/destination-gallery','TravelDestinationGalleryController');
+    Route::resource('/destination-gallery', 'TravelDestinationGalleryController');
     Route::group(['middleware' => 'auth:api'], function () {
+        Route::resource('/bucket-list', 'BucketListController');
         Route::resource('/user', 'UserController');
         Route::get('/logout', 'AuthController@logout');
-        Route::resource('/activity','ActivityController');
-        Route::resource('/travel-destination','TravelDestinationController');
-        Route::resource('/package','PackageController');
-        Route::resource('/sub-activity','SubActivityController');
-        Route::resource('/contact-type','ContactTypeController');
-        Route::resource('/travel-destination-contact','TravelDestinationContactController');
+        Route::resource('/activity', 'ActivityController');
+        Route::resource('/travel-destination', 'TravelDestinationController');
+        Route::resource('/package', 'PackageController');
+        Route::resource('/sub-activity', 'SubActivityController');
+        Route::resource('/contact-type', 'ContactTypeController');
+        Route::resource('/travel-destination-contact', 'TravelDestinationContactController');
     });
 });
