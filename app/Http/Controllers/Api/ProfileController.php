@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\UserAddress;
 use App\Data\Models\UserBucketList;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -49,6 +50,15 @@ class ProfileController extends Controller
                 'activity_id' => $item['activity_id'],
                 'sub_activity_id' => $item['sub_activity_id'],
                 'complete' => false
+            ]);
+        });
+        collect($request->user_addresses)->each(function ($item) {
+            UserAddress::updateOrCreate([
+                'user_id' => Auth::id(),
+                'address' => $request->address ?? 'Unknown',
+                'latitude' => $item['latitude'],
+                'longitude' => $item['longitude'],
+                'type' => 'Primary'
             ]);
         });
         return response()->json(['user' => $user, 'message' => 'success']);
