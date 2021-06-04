@@ -183,13 +183,12 @@ class PackageController extends Controller
             'description' => $request->description,
         ]);
         PackageCost::where('package_id',$package->id)->delete();
-        collect($request->costs)->each(function ($cost) use ($package, $request) {
-            PackageCost::updateOrCreate([
+        collect($request->package_cost)->each(function ($cost) use ($package, $request) {
+            PackageCost::create([
                 'package_id' => $package->id,
                 'description' => $cost['description'],
                 'cost' => $cost['cost'],
                 'minimum_deposit' => $cost['minimum_deposit'],
-            ],[
                 'added_by' => $request->user()->id
             ]);
         });

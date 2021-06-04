@@ -30,7 +30,9 @@ import {
     Checkbox,
     Tag,
     Rate,
-    CheckboxButton
+    CheckboxButton,
+    Tabs,
+    TabPane
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -55,6 +57,8 @@ Vue.component(Tag.name,Tag);
 Vue.component(Slider.name,Slider);
 Vue.component(Rate.name,Rate);
 Vue.component(CheckboxButton.name,CheckboxButton);
+Vue.component(Tabs.name,Tabs);
+Vue.component(TabPane.name,TabPane);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;

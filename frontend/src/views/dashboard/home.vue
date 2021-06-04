@@ -121,8 +121,8 @@
                                 </el-tag>
                                 <br/>
                                 <br/>
-                                <p style="align-content: center">
-                                    <el-button type="success">View Packages</el-button>
+                                <p v-show="item.packages.length" style="align-content: center">
+                                    <router-link  :to="'/destination-packages/view/'+item.id" class="btn btn-success">View Packages</router-link>
                                 </p>
                             </div>
                         </div>

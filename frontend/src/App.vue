@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <app-content v-if="isLoggedIn && $route.path!=='/home'"/>
-        <home-content v-if="isLoggedIn && $route.path==='/home'"/>
+        <app-content v-if="isLoggedIn && $route.meta.admin"/>
+        <home-content v-if="isLoggedIn && $route.meta.guest"/>
         <router-view v-if="!isLoggedIn"/>
 
     </div>

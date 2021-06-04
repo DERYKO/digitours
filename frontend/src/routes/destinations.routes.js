@@ -6,7 +6,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/destinations/travel-destinations'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
         },
     },
     {
@@ -16,7 +16,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/destinations/travel-destinations-create'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
         },
     },
     {
@@ -26,7 +26,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/destinations/travel-destination-contacts'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
         },
     },
     {
@@ -36,7 +36,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/destinations/travel-destination-gallery'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
         },
     },
     {
@@ -46,7 +46,17 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/packages/packages'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
+        },
+    },
+    {
+        path: '/destination-packages/view/:id',
+        name: 'destination-packages',
+        components: {
+            default: () => import(/* webpackChunkName: "auth" */ '../views/packages/package-details'),
+        },
+        meta: {
+            guest: true,
         },
     },
     {
@@ -56,7 +66,7 @@ export default [
             default: () => import(/* webpackChunkName: "auth" */ '../views/packages/packages-create'),
         },
         meta: {
-            auth: true,admin: true,
+            auth: true, admin: true,
         },
     }
 ];
