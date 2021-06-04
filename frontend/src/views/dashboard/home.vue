@@ -1,10 +1,13 @@
 <template>
     <div>
         <div class="row">
-            <p>
-                <el-button @click="filters_visible=!filters_visible" type="warning" size="small"><i
-                    class="icon ni ni-filter-alt"/></el-button>
-            </p>
+            <div class="col-sm-12">
+            <el-button @click="filters_visible=!filters_visible" type="warning" size="small"><i
+                class="icon ni ni-filter-alt"/></el-button>
+            <el-button v-show="filters_visible===true" @click="filters_visible=!filters_visible" type="danger"
+                       size="small"><i
+                class="icon ni ni-cross pull-right"/></el-button>
+            </div>
         </div>
         <div v-show="filters_visible===true" class="row">
             <div class="col-sm-12">
@@ -12,11 +15,26 @@
                     <div class="row g-3 align-start">
                         <div class="col-lg-1">
                             <div class="form-group">
+                                <label class="form-label" for="country">Country</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="form-group">
+                                <el-checkbox-group id="country" v-model="filters.countries">
+                                    <el-checkbox-button v-for="country in countries" :label="country.id"
+                                                        :key="country.id">{{ country.name }}
+                                    </el-checkbox-button>
+                                </el-checkbox-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-start">
+                        <div class="col-lg-1">
+                            <div class="form-group">
                                 <label class="form-label" for="counties">Counties</label>
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            {{regions}}
                             <div class="form-group">
                                 <el-checkbox-group id="counties" v-model="filters.regions">
                                     <el-checkbox-button v-for="region in regions" :label="region.id"
@@ -129,6 +147,8 @@ export default {
             filters: {
                 rating: 2,
                 sub_activities: [],
+                regions: [],
+                countries: []
             },
             filters_visible: false
         }
