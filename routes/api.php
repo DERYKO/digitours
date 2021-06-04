@@ -22,9 +22,11 @@ Route::group(['namespace' => 'Api'], function () {
     Route::post('/reset', 'AuthController@forgot');
     Route::resource('/destination-gallery', 'TravelDestinationGalleryController');
     Route::group(['middleware' => 'auth:api'], function () {
+        Route::get('/logout', 'AuthController@logout');
+        Route::resource('/country', 'CountryController');
+        Route::resource('/region', 'RegionController');
         Route::resource('/bucket-list', 'BucketListController');
         Route::resource('/user', 'UserController');
-        Route::get('/logout', 'AuthController@logout');
         Route::resource('/activity', 'ActivityController');
         Route::resource('/travel-destination', 'TravelDestinationController');
         Route::resource('/package', 'PackageController');

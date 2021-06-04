@@ -5,6 +5,8 @@ import activities from "./activities.store";
 import travel_destinations from "./travel_destinations.store";
 import contact_types from "./contact_types.store";
 import packages from "./packages.store";
+import locations from "./locations.store";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -26,7 +28,7 @@ export default new Vuex.Store({
         setAutoSave(state, autoSave) {
             state.autoSave = autoSave;
         },
-        openModal(state,status){
+        openModal(state, status) {
             state.dialogVisible = status;
         }
     },
@@ -35,6 +37,7 @@ export default new Vuex.Store({
         activities,
         travel_destinations,
         contact_types,
-        packages
+        packages,
+        locations
     }
 })
