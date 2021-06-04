@@ -79,13 +79,14 @@ class TravelDestination extends Model
             $q->whereHas('sub_activities', function ($q) use ($filters) {
                 $q->whereIn('sub_activity_id', $filters['sub_activities']);
             });
-        })->when(isset($filters['price']) && count($filters['price']), function ($q) use ($filters) {
-            $q->whereHas('packages', function ($q) use ($filters) {
-                $q->whereHas('package_cost', function ($q) use ($filters) {
-                    $q->where('cost', '>=', $filters['price'][0])
-                        ->where('cost', '<=', $filters['price'][1]);
-                });
-            });
         });
+//            ->when(isset($filters['price']) && count($filters['price']), function ($q) use ($filters) {
+//            $q->whereHas('packages', function ($q) use ($filters) {
+//                $q->whereHas('package_cost', function ($q) use ($filters) {
+//                    $q->where('cost', '>=', $filters['price'][0])
+//                        ->where('cost', '<=', $filters['price'][1]);
+//                });
+//            });
+//        });
     }
 }

@@ -49,7 +49,7 @@
                                         v-model="filters.price"
                                         range
                                         show-stops
-                                        :max="100">
+                                        :max="20000">
                                     </el-slider>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ export default {
         return {
             filters: {
                 rating: 2,
-                sub_activities: []
+                sub_activities: [],
             },
             filters_visible: false
         }
