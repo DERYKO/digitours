@@ -71,11 +71,20 @@ class TravelDestination extends Model
     {
         $query->when(isset($filters['search']), function ($query) use ($filters) {
             $query->where('name', 'like', '%' . $filters['search'] . '%');
-            $query->OrWhere('address', 'like', '%' . $filters['search'] . '%');
-            $query->OrWhere('latitude', 'like', '%' . $filters['search'] . '%');
-            $query->OrWhere('longitude', 'like', '%' . $filters['search'] . '%');
-            $query->OrWhereHas('package', function ($q) use ($filters) {
+            $query->orWhere('address', 'like', '%' . $filters['search'] . '%');
+            $query->orWhereHas('package', function ($q) use ($filters) {
                 $q->where('description', 'like', '%' . $filters['search'] . '%');
+            });
+        })->when(isset($filters['sub_activities']) && count($filters['sub_activities']), function ($q) use ($filters) {
+            $q->whereHas('sub_activities', function ($q) use ($filters) {
+                $q->whereIn('sub_activity_id', $filters['sub_activities']);
+            });
+        })->when(isset($filters['price']) && count($filters['price']), function ($q) use ($filters) {
+            $q->whereHas('packages', function ($q) use ($filters) {
+                $q->whereHas('package_cost', function ($q) use ($filters) {
+                    $q->where('cost', '>=', $filters['price'][0])
+                        ->where('cost', '<=', $filters['price'][1]);
+                });
             });
         });
     }

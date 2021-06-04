@@ -6,6 +6,7 @@ import './views/components';
 
 Vue.config.productionTip = false;
 import {
+    Slider,
     Pagination,
     Message,
     Loading,
@@ -27,7 +28,9 @@ import {
     Dialog,
     CheckboxGroup,
     Checkbox,
-    Tag
+    Tag,
+    Rate,
+    CheckboxButton
 } from 'element-ui';
 
 Vue.use(Pagination);
@@ -49,6 +52,9 @@ Vue.component(Dialog.name,Dialog);
 Vue.component(CheckboxGroup.name,CheckboxGroup);
 Vue.component(Checkbox.name,Checkbox);
 Vue.component(Tag.name,Tag);
+Vue.component(Slider.name,Slider);
+Vue.component(Rate.name,Rate);
+Vue.component(CheckboxButton.name,CheckboxButton);
 Vue.prototype.$message = Message;
 Vue.use(Loading.directive);
 Vue.prototype.$loading = Loading.service;
