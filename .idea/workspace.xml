@@ -6,6 +6,175 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/app.e1ed9163.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/app.e1ed9163.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/auth.977ab1a3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/auth.977ab1a3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/chunk-vendors.73f3928e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/js/chunk-vendors.73f3928e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/dashlite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/dashlite.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/dashlite.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/dashlite.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/quill.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/quill.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/summernote.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/summernote.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/tinymce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/editors/tinymce.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-bluelite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-egyptian.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/skins/theme-red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style-email.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/chats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/file-manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/inbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/kanban.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/apps/messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/charts/chart-ecommerce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/charts/gd-analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/charts/gd-default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/charts/gd-invest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/editors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/example-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/example-sweetalert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/example-toastr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/editors/quill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/editors/skins/content/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/editors/summernote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/editors/tinymce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/jkanban.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/jqvmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/libs/tagify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/chunk-666b0558.3435b2aa.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/chunk-vendors.d0cbd132.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/dashlite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/dashlite.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/dashlite.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/dashlite.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/quill.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/quill.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/summernote.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/summernote.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/tinymce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/editors/tinymce.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-bluelite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-egyptian.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/skins/theme-red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/style-email.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/DMSans-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nioicon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nioicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nioicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nioicon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Nunito-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/Roboto-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/element-icons.535877f5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/element-icons.732389de.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/fonts/tinymce-mobile.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/img/1495.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/img/favicon.be1ef964.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/img/loading.3871af13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/img/promo-a.b1ee2455.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/img/sample2.b245121f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/app.739228b3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/app.739228b3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/chats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/file-manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/inbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/kanban.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/apps/messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/auth.6500d2c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/auth.6500d2c2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/chart-analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/chart-ecommerce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/chart-sales.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/gd-analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/gd-default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/charts/gd-invest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-2d2178d6.e59b8f09.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-2d2178d6.e59b8f09.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-2d21af27.a34e7a5c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-2d21af27.a34e7a5c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-666b0558.3e22ab1a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-666b0558.3e22ab1a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-vendors.08c71c05.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/chunk-vendors.08c71c05.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/editors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/example-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/example-sweetalert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/example-toastr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/editors/quill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/editors/skins/content/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/editors/summernote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/editors/tinymce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/jkanban.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/jqvmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/libs/tagify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/spa/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,17 +331,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/public/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/frontend/public/assets" />
       <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/frontend/src/assets" />
-      <recent name="$PROJECT_DIR$/frontend/src/views" />
-      <recent name="$PROJECT_DIR$/frontend/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/views" />
@@ -236,6 +406,8 @@
       <workItem from="1622563322222" duration="2514000" />
       <workItem from="1622611865988" duration="286000" />
       <workItem from="1622783921777" duration="2144000" />
+      <workItem from="1622792589816" duration="18339000" />
+      <workItem from="1622966017106" duration="1685000" />
     </task>
     <servers />
   </component>

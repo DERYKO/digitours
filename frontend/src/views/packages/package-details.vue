@@ -20,7 +20,7 @@
                                     <br/>
                                     <div class="col-sm-6">
                                         <p>{{item.description}}</p>
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered table-sm">
                                             <thead>
                                             <tr>
                                                 <th>Type</th>
@@ -30,7 +30,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr v-for="cost in item.package_cost">
+                                            <tr v-for="cost in item.package_cost" :key="cost.id">
                                                 <td>{{ cost.description }}</td>
                                                 <td>{{ cost.cost }}</td>
                                                 <td>{{ cost.minimum_deposit }}</td>
@@ -117,7 +117,7 @@ export default {
             getPackages: 'packages/getPackages'
         }),
         handleClick(tab) {
-
+            console.log(tab);
         },
         bookPackageCost(package_cost_id,policy){
             if (policy){
