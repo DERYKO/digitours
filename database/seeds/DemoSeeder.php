@@ -141,23 +141,23 @@ class DemoSeeder extends Seeder
         }
         factory(ContactType::class, 2)->create();
         factory(PaymentMethod::class, 3)->create();
-        factory(TravelDestination::class, 20)->create()
-            ->each(function ($destination) {
-                factory(TravelDestinationPolicy::class, 1)->create(['travel_destination_id' => $destination->id]);
-                factory(TravelDestinationGallery::class, 5)->create(['travel_destination_id' => $destination->id]);
-                factory(TravelDestinationContact::class, 2)->create(['travel_destination_id' => $destination->id]);
-                factory(Package::class, 3)->create(['travel_destination_id' => $destination->id])->each(function ($package) {
-                    factory(PackageInclusive::class, 1)->create(['package_id' => $package->id]);
-                    factory(PackageExclusive::class, 1)->create(['package_id' => $package->id]);
-                    factory(PackagePolicy::class, 1)->create(['package_id' => $package->id]);
-                    factory(PackageCost::class, 3)->create(['package_id' => $package->id]);
-                    factory(PackageRequirement::class, 1)->create(['package_id' => $package->id]);
-                    factory(PackageItinerary::class, 1)->create(['package_id' => $package->id]);
-                    SubActivity::all()->random(4)->each(function ($item) use ($package) {
-                        factory(PackageSubActivity::class, 1)->create(['sub_activity_id' => $item->id, 'package_id' => $package->id]);
-                    });
-                });
-            });
+//        factory(TravelDestination::class, 20)->create()
+//            ->each(function ($destination) {
+//                factory(TravelDestinationPolicy::class, 1)->create(['travel_destination_id' => $destination->id]);
+//                factory(TravelDestinationGallery::class, 5)->create(['travel_destination_id' => $destination->id]);
+//                factory(TravelDestinationContact::class, 2)->create(['travel_destination_id' => $destination->id]);
+//                factory(Package::class, 3)->create(['travel_destination_id' => $destination->id])->each(function ($package) {
+//                    factory(PackageInclusive::class, 1)->create(['package_id' => $package->id]);
+//                    factory(PackageExclusive::class, 1)->create(['package_id' => $package->id]);
+//                    factory(PackagePolicy::class, 1)->create(['package_id' => $package->id]);
+//                    factory(PackageCost::class, 3)->create(['package_id' => $package->id]);
+//                    factory(PackageRequirement::class, 1)->create(['package_id' => $package->id]);
+//                    factory(PackageItinerary::class, 1)->create(['package_id' => $package->id]);
+//                    SubActivity::all()->random(4)->each(function ($item) use ($package) {
+//                        factory(PackageSubActivity::class, 1)->create(['sub_activity_id' => $item->id, 'package_id' => $package->id]);
+//                    });
+//                });
+//            });
     }
 
     public function truncateTables()
