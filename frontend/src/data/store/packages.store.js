@@ -5,9 +5,11 @@ export default {
     namespaced: true,
     state: {
         packages: [],
-        travel_destination_package: null
+        travel_destination_package: null,
+        package_cost: {}
     },
     getters: {
+        package_cost: state => state.package_cost,
         packages: state => state.packages,
         travel_destination_package: state => state.travel_destination_package
     },
@@ -17,6 +19,9 @@ export default {
         },
         setTravelDestinationPackage(state,item){
             state.travel_destination_package = item;
+        },
+        setPackageCost(state,data){
+            state.package_cost = data;
         }
     },
     actions: {
@@ -66,8 +71,15 @@ export default {
                 dispatch('getPackages',filters);
                 this._vm.$message.success('Package deleted successfully!');
             }catch (e) {
-                console.log(e);
                 this._vm.$message.error('Error removing package');
+            }
+        },
+        async getPackageCost({commit},id){
+            try {
+                const data = await api.getPackageCost(id);
+                commit('setPackageCost',data);
+            }catch (e){
+                this._vm.$message.error('Error getting package cost');
             }
         }
     }

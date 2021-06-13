@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/packages.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/packages.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/packages.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/packages.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +26,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <interpreter composer="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -240,6 +254,9 @@
       <workItem from="1622792589816" duration="18339000" />
       <workItem from="1622966017106" duration="2542000" />
       <workItem from="1623044371160" duration="2457000" />
+      <workItem from="1623138221482" duration="1594000" />
+      <workItem from="1623241206342" duration="102000" />
+      <workItem from="1623589849883" duration="3302000" />
     </task>
     <servers />
   </component>

@@ -52,6 +52,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="row g-3 align-start">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Description</label>
+                            <span class="form-note">Brief description of destination</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <div class="form-control-wrap">
+                                <ckeditor v-model="form.description"></ckeditor>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row g-3 align-center">
                     <div class="col-lg-3">
                         <div class="form-group">

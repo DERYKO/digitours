@@ -15,6 +15,7 @@ class TravelDestination extends Model
         'latitude',
         'longitude',
         'website',
+        'description',
         'added_by'
     ];
 

@@ -32,7 +32,7 @@ class TravelDestinationController extends Controller
     {
         $travel_destination = TravelDestination::with('travel_destination_contacts:id,contact_type_id,travel_destination_id,value', 'gallery', 'travel_destination_contacts.contact_type:id,name', 'tags.activity','packages',
             'packages.package_cost', 'packages.package_exclusive', 'packages.package_inclusive',  'packages.package_itinerary', 'packages.package_policy', 'packages.package_requirement', 'packages.package_sub_activity.sub_activity:id,name')
-            ->select('id', 'name', 'logo', 'address', 'latitude', 'longitude', 'website', 'created_at')
+            ->select('id', 'name', 'logo', 'address', 'latitude','description', 'longitude', 'website', 'created_at')
             ->filterBy($request->all())
             ->get();
         return response()->json($travel_destination, 200);
@@ -74,6 +74,7 @@ class TravelDestinationController extends Controller
             'website' => $request->website,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
+            'description' => $request->description,
             'added_by' => Auth::id()
         ]);
         $this->saveMapping($request, $travel_destination->id);
@@ -146,6 +147,7 @@ class TravelDestinationController extends Controller
             'website' => $request->website,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
+            'description' => $request->description
         ]);
         TravelDestinationPolicy::updateOrCreate([
             'travel_destination_id' => $travel_destination->id,

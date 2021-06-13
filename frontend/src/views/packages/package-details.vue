@@ -19,13 +19,14 @@
                                     <br/>
                                     <br/>
                                     <div class="col-sm-6">
-                                        <p>{{item.description}}</p>
+                                        <p>{{ item.description }}</p>
                                         <table class="table table-bordered table-sm">
                                             <thead>
                                             <tr>
                                                 <th>Type</th>
                                                 <th>Cost</th>
                                                 <th>Minimum Deposit</th>
+                                                <th>Persons/Group/Company Count</th>
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
@@ -34,13 +35,19 @@
                                                 <td>{{ cost.description }}</td>
                                                 <td>{{ cost.cost }}</td>
                                                 <td>{{ cost.minimum_deposit }}</td>
-                                                <td><button @click="bookPackageCost(cost.id,item.package_policy)" class="btn btn-success" type="button">Book Now</button></td>
+                                                <td><input type="number" min="1" v-model="cost.quantity"
+                                                           class="form-control"/></td>
+                                                <td>
+                                                    <button @click="bookPackageCost(cost,item.package_policy)"
+                                                            class="btn btn-success" type="button">Book Now
+                                                    </button>
+                                                </td>
                                             </tr>
                                             </tbody>
                                             <tfoot>
                                             <tr v-if="!item.package_cost.length">
-                                                <td  class="text-xl-center" colspan="5">
-                                                   No package costs yet.
+                                                <td class="text-xl-center" colspan="5">
+                                                    No package costs yet.
                                                 </td>
                                             </tr>
                                             </tfoot>
@@ -109,6 +116,7 @@ export default {
     },
     computed: {
         ...mapGetters({
+            user: 'profile/user',
             packages: 'packages/packages'
         })
     },
@@ -119,17 +127,14 @@ export default {
         handleClick(tab) {
             console.log(tab);
         },
-        bookPackageCost(package_cost_id,policy){
-            if (policy){
+        bookPackageCost(cost, policy) {
+            if (policy) {
                 this.$confirm(policy.policy, 'Accept Terms And Conditions', {
                     dangerouslyUseHTMLString: true,
                     confirmButtonText: 'Continue',
                     cancelButtonText: 'Cancel',
-                },).then(() => {
-                    this.$message({
-                        type: 'success',
-                        message: 'Delete completed'
-                    });
+                }).then(() => {
+                    this.$router.push('/package/payments/' + cost.id)
                 }).catch(() => {
                     this.$message({
                         type: 'info',

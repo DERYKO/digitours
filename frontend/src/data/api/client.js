@@ -14,13 +14,13 @@ class Client {
         const token = localStorage.getItem('digitours@ke') || '';
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
         this.http = axios.create({
-            baseURL: '/api/',
+            baseURL: 'http://143.198.169.255/api/',
         });
 
         this.http.interceptors.response.use(response => response, async (error) => {
             if (error.response && error.response.status === 401) {
                 localStorage.removeItem('digitours@ke');
-                window.location.href = '/home';
+                window.location.href = '/login';
             }
             return Promise.reject(error);
         });

@@ -8,6 +8,7 @@ import destinations from './destinations.routes';
 import promotions from './promotions.routes';
 import surveys from './surveys.routes';
 import users from './users.routes';
+import payments from './payments.routes';
 import authMiddleware from './middlewares/auth-middleware';
 import adminMiddleware from './middlewares/admin-middleware';
 
@@ -23,6 +24,7 @@ const router = new Router({
         ...promotions,
         ...surveys,
         ...users,
+        ...payments,
         {
             path: '*',
             redirect: '/home',
