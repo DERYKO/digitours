@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class MpesaController extends Controller
 {
@@ -142,12 +143,12 @@ class MpesaController extends Controller
         $BusinessShortCode = 174379;
         $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
         $TransactionType = 'CustomerPayBillOnline';
-        $Amount = $request->input('amount');
-        $PartyA = substr($request->user()->phone_number, 1);
+        $Amount = $request->amount;
+        $PartyA = substr($request->phone, 1);
         $PartyB = 174379;
         $PhoneNumber = substr($request->user()->phone_number, 1);
-        $CallBackURL = 'http://143.198.169.255//api/v1/transactions/' . $package_cost_id . '/' . $user_id;
-        $AccountReference = 'SabbieParks';
+        $CallBackURL = 'http://143.198.169.255/api/transactions/' . $user_id . '/' . $package_cost_id;
+        $AccountReference = 'DigiTours';
         $TransactionDesc = 'Testing';
 
 
@@ -191,49 +192,8 @@ class MpesaController extends Controller
 
     }
 
-    public function transaction_logs(Request $request, $id)
+    public function paymentTransactions(Request $request, $user_id, $package_cost_id)
     {
-        $request = $request['Body'];
-        $collection = Collection::findOrfail($id);
-        $user = User::where('phone_number', $collection->partyA)->first();
-        if ($request['stkCallback']['ResultCode'] == 1) {
-            $collection->update([
-                'merchantRequestId' => $request['stkCallback']['MerchantRequestID'],
-                'checkoutRequestId' => $request['stkCallback']['CheckoutRequestID'],
-                'ResultDesc' => $request['stkCallback']['ResultDesc'],
-                'status' => $request['stkCallback']['ResultCode']
-            ]);
-            $this->dispatch(new PaymentStatusFail($request['stkCallback']['ResultDesc'], $user));
-
-        } elseif ($request['stkCallback']['ResultCode'] == 1032) {
-            $collection->update([
-                'merchantRequestId' => $request['stkCallback']['MerchantRequestID'],
-                'checkoutRequestId' => $request['stkCallback']['CheckoutRequestID'],
-                'ResultDesc' => $request['stkCallback']['ResultDesc'],
-                'status' => $request['stkCallback']['ResultCode']
-            ]);
-            $this->dispatch(new PaymentStatusFail($request['stkCallback']['ResultDesc'], $user));
-        } elseif ($request['stkCallback']['ResultCode'] == 0) {
-            $collection->update([
-                'merchantRequestId' => $request['stkCallback']['MerchantRequestID'],
-                'checkoutRequestId' => $request['stkCallback']['CheckoutRequestID'],
-                'ResultDesc' => $request['stkCallback']['ResultDesc'],
-                'status' => $request['stkCallback']['ResultCode'],
-                'receipt_no' => 78999909
-            ]);
-            $parking_spot = ParkingSpot::findOrfail($collection->parking_spot_id);
-            $parking_spot->update([
-                'status' => 'Occupied'
-            ]);
-            Booking::create([
-                'user_id' => $user->id,
-                'parking_spot_id' => $collection->parking_spot_id,
-                'user_vehicle_id' => $collection->user_vehicle_id,
-                'expiry_time' => 30,
-                'inconvenience_fee' => 50
-            ]);
-            $this->dispatch(new PaymentStatusSuccess($request['stkCallback']['ResultDesc'], $user, 30, 50, ParkingSpot::findOrfail($collection->parking_spot_id)));
-        }
-        return response()->json(['message' => 'Success']);
+        Log::info($request->all());
     }
 }
