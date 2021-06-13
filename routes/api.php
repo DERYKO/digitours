@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/profile', function (Request $request) {
 Route::group(['namespace' => 'Api'], function () {
     Route::post('/login', 'AuthController@login');
     Route::post('/reset', 'AuthController@forgot');
-    Route::post('/pay-via-mpesa', 'MpesaController@payWithMPESA');
+    Route::post('/pay-via-mpesa/{user_id}/{package_cost_id}', 'MpesaController@payWithMPESA');
     Route::resource('/destination-gallery', 'TravelDestinationGalleryController');
     Route::group(['middleware' => 'auth:api'], function () {
         Route::get('/logout', 'AuthController@logout');
