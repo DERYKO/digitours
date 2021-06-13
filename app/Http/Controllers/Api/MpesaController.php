@@ -146,7 +146,7 @@ class MpesaController extends Controller
         $Amount = $request->amount;
         $PartyA = substr($request->phone, 1);
         $PartyB = 174379;
-        $PhoneNumber = substr($request->user()->phone_number, 1);
+        $PhoneNumber = substr($request->phone, 1);
         $CallBackURL = 'http://143.198.169.255/api/transactions/' . $user_id . '/' . $package_cost_id;
         $AccountReference = 'DigiTours';
         $TransactionDesc = 'Testing';
