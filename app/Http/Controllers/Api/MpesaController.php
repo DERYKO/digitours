@@ -136,18 +136,8 @@ class MpesaController extends Controller
         return $curl_response;
     }
 
-    public function payWithMPESA(Request $request,$package_cost_id)
+    public function payWithMPESA(Request $request, $user_id, $package_cost_id)
     {
-        $c = Collection::create([
-            'user_vehicle_id' => $request->user_vehicle_id,
-            'client_id' => $request->client_id,
-            'parking_spot_id' => $request->parking_spot_id,
-            'payment_type' => 'Mpesa',
-            'amount' => $request->amount,
-            'partyA' => $request->user()->phone_number,
-            'partyB' => 174379,
-            'status' => 0,
-        ]);
         $access_token = self::generateToken();
         $BusinessShortCode = 174379;
         $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
@@ -156,7 +146,7 @@ class MpesaController extends Controller
         $PartyA = substr($request->user()->phone_number, 1);
         $PartyB = 174379;
         $PhoneNumber = substr($request->user()->phone_number, 1);
-        $CallBackURL = 'http://159.89.88.97/api/v1/transactions/' . $c->id;
+        $CallBackURL = 'http://143.198.169.255//api/v1/transactions/' . $package_cost_id . '/' . $user_id;
         $AccountReference = 'SabbieParks';
         $TransactionDesc = 'Testing';
 

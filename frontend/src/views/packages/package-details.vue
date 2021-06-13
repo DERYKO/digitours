@@ -134,7 +134,10 @@ export default {
                     confirmButtonText: 'Continue',
                     cancelButtonText: 'Cancel',
                 }).then(() => {
-                    this.$router.push('/package/payments/' + cost.id)
+                    this.$router.push({
+                        path: '/package/payments/' + cost.id + '/units/' + cost.quantity ?? 1
+                    })
+                    this.$router.push()
                 }).catch(() => {
                     this.$message({
                         type: 'info',

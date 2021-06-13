@@ -4,6 +4,7 @@ import travel_destinations from './travel_destinations.api';
 import contact_types from './contact_types.api';
 import packages from "./packages.api";
 import locations from "./locations.api";
+import payments from "./payments.api";
 
 export default {
     ...profile,
@@ -11,5 +12,6 @@ export default {
     ...travel_destinations,
     ...contact_types,
     ...packages,
-    ...locations
+    ...locations,
+    ...payments
 }

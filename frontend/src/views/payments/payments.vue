@@ -2,7 +2,11 @@
     <el-tabs type="border-card">
         <el-tab-pane>
             <span slot="label"><i class="el-icon-mpe"></i> MPESA</span>
-            <h6>{{package_cost.package.description}} - {{package_cost.description}}</h6>
+            <img style="height: 30px;width: 100px"
+                 src="https://seeklogo.com/images/M/mpesa-logo-AE44B6F8EB-seeklogo.com.png">
+            <br/>
+            <h6>{{ package_cost.package.description }} - {{ package_cost.description }} -
+                {{ $route.params.unit_count }}</h6>
             <form action="#" class="gy-3">
                 <div class="row g-3 align-center">
                     <div class="col-lg-3">
@@ -44,8 +48,19 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input v-model="booking.amount" :min="package_cost.minimum_deposit" type="text" class="form-control">
+                                <input v-model="booking.amount"
+                                       :min="package_cost.minimum_deposit * $route.params.unit_count" type="text"
+                                       class="form-control">
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-7">
+                        <div class="form-group mt-2">
+                            <button @click="initiativeLipaNaMpesa" type="button" class="btn btn-lg btn-success">PAY WITH
+                                MPESA
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -69,12 +84,17 @@ export default {
         this.getPackageCost(this.$route.params.id);
         this.booking.name = this.user.name;
         this.booking.phone = this.user.phone;
-        this.booking.amount = this.package_cost.cost * 10;
+        this.booking.amount = this.package_cost.cost * this.$route.params.unit_count;
     },
-    data(){
-      return {
-          booking: {}
-      }
+    props: {
+        unit_count: {
+            default: 1
+        }
+    },
+    data() {
+        return {
+            booking: {}
+        }
     },
     computed: {
         ...mapGetters({
@@ -84,8 +104,17 @@ export default {
     },
     methods: {
         ...mapActions({
-            getPackageCost: 'packages/getPackageCost'
-        })
+            getPackageCost: 'packages/getPackageCost',
+            lipaNaMPESA: 'payments/initiativeLipaNaMpesa'
+        }),
+        initiativeLipaNaMpesa() {
+            this.lipaNaMPESA({
+                user_id: this.user.id,
+                package_cost_id: this.package_cost.id,
+                ...this.booking
+            });
+        }
+
     }
 }
 </script>

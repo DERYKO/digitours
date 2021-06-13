@@ -6,18 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TravelDestinationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/packages.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/packages.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/packages.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/packages.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destination-gallery.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/destinations/travel-destinations-create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MpesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MpesaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/payments.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/routes/payments.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +250,7 @@
       <workItem from="1623044371160" duration="2457000" />
       <workItem from="1623138221482" duration="1594000" />
       <workItem from="1623241206342" duration="102000" />
-      <workItem from="1623589849883" duration="3648000" />
+      <workItem from="1623589849883" duration="5923000" />
     </task>
     <servers />
   </component>
