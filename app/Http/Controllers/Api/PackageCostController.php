@@ -38,7 +38,7 @@ class PackageCostController extends Controller
      */
     public function show($id)
     {
-        $package_cost = PackageCost::findOrFail($id);
+        $package_cost = PackageCost::with('package')->findOrFail($id);
         return response()->json($package_cost);
     }
 
