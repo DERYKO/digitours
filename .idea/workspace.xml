@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MpesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MpesaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/api/payments.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/api/payments.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/packages/package-details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +247,8 @@
       <workItem from="1623044371160" duration="2457000" />
       <workItem from="1623138221482" duration="1594000" />
       <workItem from="1623241206342" duration="102000" />
-      <workItem from="1623589849883" duration="6863000" />
+      <workItem from="1623589849883" duration="10018000" />
+      <workItem from="1623649421830" duration="28000" />
     </task>
     <servers />
   </component>

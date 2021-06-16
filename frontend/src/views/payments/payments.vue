@@ -6,7 +6,7 @@
                  src="https://seeklogo.com/images/M/mpesa-logo-AE44B6F8EB-seeklogo.com.png">
             <br/>
             <h6>{{ package_cost.package.description }} - {{ package_cost.description }} -
-                {{ $route.params.unit_count }}</h6>
+                count of <span style="color: red"> {{ $route.params.unit_count }}</span></h6>
             <form action="#" class="gy-3">
                 <div class="row g-3 align-center">
                     <div class="col-lg-3">
@@ -52,6 +52,13 @@
                                        :min="package_cost.minimum_deposit * $route.params.unit_count" type="text"
                                        class="form-control">
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3 align-center">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <span>You will receive an stk push on the {{booking.phone}} when you press PAY WITH MPESA</span>
                         </div>
                     </div>
                 </div>

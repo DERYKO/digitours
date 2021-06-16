@@ -46,43 +46,6 @@ class MpesaController extends Controller
 
 
     }
-
-    public function walletCallBack(Request $request, $id)
-    {
-        $request = $request['Body'];
-        $user = User::findOrfail($id);
-        if ($request['stkCallback']['ResultCode'] == 1) {
-            $this->dispatch(new PaymentStatusFail($request['stkCallback']['ResultDesc'], $user));
-
-        } elseif ($request['stkCallback']['ResultCode'] == 1032) {
-            $this->dispatch(new PaymentStatusFail($request['stkCallback']['ResultDesc'], $user));
-        } elseif ($request['stkCallback']['ResultCode'] == 0) {
-            $wallet = Wallet::where('user_id', $id)->latest()->first();
-            $items = $request['stkCallback']['CallbackMetadata']['Item'];
-            $amount = 0;
-            foreach ($items as $paymentItem) {
-                $Name = $paymentItem['Name'];
-                switch ($Name) {
-                    case 'Amount':
-                        $amount = $paymentItem['Value'];
-                        break;
-                }
-            }
-            Wallet::create([
-                'user_id' => $id,
-                'transaction_type' => 'Mpesa',
-                'debit' => 0.0,
-                'credit' => $amount,
-                'balance' => $wallet->balance + $amount
-            ]);
-            $first_name = $user->first_name;
-            $title = $user->title;
-            $message = "Hi $title $first_name, Recharge of Kes $amount was successful and has be credited to your account. Cheers!!";
-            $this->dispatch(new BroadcastMessage("Account Recharge", $message, $user->id));
-        }
-        return response()->json(['message' => 'Success']);
-    }
-
     public function loadWallet(Request $request)
     {
 

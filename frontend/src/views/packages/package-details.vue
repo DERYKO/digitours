@@ -4,8 +4,7 @@
             <el-tabs type="border-card" v-model="activeTab">
                 <el-tab-pane v-for="item in packages" :key="item.id" :label="item.description" :name="item.id">
                     <div class="col-sm-12">
-                        <span style="font-size: 18px;font-weight: bold"><img :src="item.travel_destination.logo"
-                                                                             style="height: 30px;width: 30px"/>  {{
+                        <span style="font-size: 18px;font-weight: bold">  {{
                                 item.travel_destination.name
                             }}</span>
                         <br/>
@@ -35,7 +34,7 @@
                                                 <td>{{ cost.description }}</td>
                                                 <td>{{ cost.cost }}</td>
                                                 <td>{{ cost.minimum_deposit }}</td>
-                                                <td><input type="number" min="1" v-model="cost.quantity"
+                                                <td><input type="number" min="1" placeholder="1" v-model="cost.quantity"
                                                            class="form-control"/></td>
                                                 <td>
                                                     <button @click="bookPackageCost(cost,item.package_policy)"
