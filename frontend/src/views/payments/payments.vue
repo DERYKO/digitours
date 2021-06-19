@@ -75,7 +75,7 @@
         </el-tab-pane>
         <el-tab-pane>
             <span slot="label"><i class="el-icon-bank-card"></i> CARD</span>
-            Route
+            <VCreditCard/>
         </el-tab-pane>
         <el-tab-pane>
             <span slot="label"><i class="el-icon-wallet"></i> WALLET</span>
@@ -84,9 +84,13 @@
     </el-tabs>
 </template>
 <script>
+import 'v-credit-card/dist/VCreditCard.css';
 import {mapActions, mapGetters} from 'vuex';
-
+import VCreditCard from 'v-credit-card';
 export default {
+    components: {
+        VCreditCard
+    },
     created() {
         this.getPackageCost(this.$route.params.id);
         this.booking.name = this.user.name;

@@ -86,8 +86,7 @@ class TravelDestination extends Model
             $query->orWhereHas('package', function ($q) use ($filters) {
                 $q->where('description', 'like', '%' . $filters['search'] . '%');
             });
-        })
-            ->when(isset($filters['sub_activities']) && count($filters['sub_activities']), function ($q) use ($filters) {
+        })->when(isset($filters['sub_activities']) && count($filters['sub_activities']), function ($q) use ($filters) {
                 $q->whereHas('sub_activities', function ($q) use ($filters) {
                     $q->whereIn('sub_activity_id', $filters['sub_activities']);
                 });

@@ -24,5 +24,9 @@ Route::group(['namespace' => 'Api'], function () {
         Route::resource('/sub-activity','SubActivityController');
         Route::resource('/travel-destination','TravelDestinationController');
         Route::resource('/package','PackageController');
+        Route::resource('/wallet', 'WalletController');
+        Route::resource('/price-range','PriceRangeController');
+        Route::resource('/country', 'CountryController');
+        Route::resource('/region', 'RegionController');
     });
 });

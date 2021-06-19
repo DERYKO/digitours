@@ -7,6 +7,7 @@ import contact_types from "./contact_types.store";
 import packages from "./packages.store";
 import locations from "./locations.store";
 import payments from "./payments.store";
+import wallets from "./wallets.store";
 
 Vue.use(Vuex);
 
@@ -40,6 +41,7 @@ export default new Vuex.Store({
         contact_types,
         packages,
         locations,
-        payments
+        payments,
+        wallets
     }
 })
