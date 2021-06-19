@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a4c4b6-ee22-4376-bb56-b9a7a797ecd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Digitours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Digitours.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/payments/payments.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/mobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/mobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data/Models/TravelDestination.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +249,7 @@
       <workItem from="1623649421830" duration="28000" />
       <workItem from="1623922632905" duration="6863000" />
       <workItem from="1623995105821" duration="145000" />
-      <workItem from="1624088359361" duration="337000" />
+      <workItem from="1624088359361" duration="708000" />
     </task>
     <servers />
   </component>
